@@ -1,0 +1,221 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TastyBites</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- nav  -->{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TastyBites</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="{% static '/assets/recipe-0.jpeg'%}" height="130" width="130" alt="TastyBites" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="{% url 'home' %}" class="nav-link"> home </a>
+          <a href="{% url 'about' %}" class="nav-link"> about </a>
+          <a href="{% url 'tags' %}" class="nav-link"> catagory </a>
+          <a href="{% url 'recipes' %}" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="{% url 'signup' %}" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+
+
+
+
+
+
+
+
+
+    <div class="recipe-page2">
+      <section class="recipe-hero">
+        <img
+          src="{% static 'assets/recipes/recipe-2.jpeg' %}"
+          class="img recipe-hero-img"
+        />
+        <article class="recipe-info">
+          <h2 id="recipe2">Greek Ribs</h2>
+          <p>
+            These Greek Ribs are one of my husband's recipes that he's been making for years. 
+            They are an absolute favorite in our house and words cannot do justice to how good 
+            these ribs are! 
+          </p>
+          <div class="recipe-icons">
+            <article>
+              <i class="fas fa-clock"></i>
+              <h5>prep time</h5>
+              <p>30 min.</p>
+            </article>
+            <article>
+              <i class="far fa-clock"></i>
+              <h5>cook time</h5>
+              <p>15 min.</p>
+            </article>
+            <article>
+              <i class="fas fa-user-friends"></i>
+              <h5>serving</h5>
+              <p>2 servings</p>
+            </article>
+          </div>
+          <p class="recipe-tags">
+            Tags : <a href="{% url 'tagtemplate' %}">beef</a>
+            <a href="{% url 'tagtemplate' %}">breakfast</a>
+            <a href="{% url 'tagtemplate' %}">pancakes</a>
+            <a href="{% url 'tagtemplate' %}">food</a>
+          </p>
+        </article>
+      </section>
+      <!-- content -->
+      <section class="recipe-content">
+        <article>
+          <h4>instructions</h4>
+          <!-- single instruction -->
+          <div class="single-instruction">
+            <header>
+              <p>step 1</p>
+              <div></div>
+            </header>
+            <p>
+              Combine baby back ribs, onion, olive oil, lemon juice, oregano,
+               honey, garlic, salt, and pepper in a large resealable plastic bag. 
+               Turn to ensure ribs are well coated.Marinate in the refrigerator, 
+               turning occasionally, 4 to 8 hours.
+            </p>
+          </div>
+          <!-- end of single instruction -->
+          <!-- single instruction -->
+          <div class="single-instruction">
+            <header>
+              <p>step 2 </p>
+              <div></div>
+            </header>
+            <p>
+              Preheat oven to 400 degrees F (200 degrees C). Line a baking sheet
+               with aluminum foil; grease with cooking spray.Arrange ribs on the
+                prepared baking sheet, leaving space between them
+            </p>
+          </div>
+          <!-- end of single instruction -->
+          <!-- single instruction -->
+          <div class="single-instruction">
+            <header>
+              <p>step 3 </p>
+              <div></div>
+            </header>
+            <p>
+              Bake in the preheated oven until browned, about 10 minutes. 
+              Reduce oven temperature to 300 degrees F (150 degrees C). 
+              Continue baking until ribs are tender, about 1 hour.
+            </p>
+          </div>
+        </article>
+        <article class="second-column">
+          <div>
+            <h4>ingredients</h4>
+            <p class="single-ingredient">3 pounds baby back ribs, membranes removed</p>
+            <p class="single-ingredient">½ cup finely chopped onion </p>
+            <p class="single-ingredient">¼ cup olive oil</p>
+            <p class="single-ingredient">¼ cup fresh lemon juice</p>
+            <p class="single-ingredient">¼ cup chopped fresh oregano </p>
+            <p class="single-ingredient">1 tablespoon liquid honey
+                                          5 cloves garlic, minced</p>
+            <p class="single-ingredient">1 teaspoon kosher salt 
+                                         1 teaspoon freshly ground black pepper</p>
+          </div>
+          <div>
+            <h4>tools</h4>
+            <p class="single-tool">pot</p>
+            <p class="single-tool">Measuring Spoons</p>
+            <p class="single-tool">Measuring Cups</p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+  
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+                <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      <span class="footer-logo">TastyBites</span> Built by
+    </p>
+  </footer>
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>

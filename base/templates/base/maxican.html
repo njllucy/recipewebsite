@@ -1,0 +1,744 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="{% static '/assets/recipe-0.jpeg'%}" height="130" width="130" alt="TastyBites" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="{% url 'home' %}" class="nav-link"> home </a>
+          <a href="{% url 'about' %}" class="nav-link"> about </a>
+          <a href="{% url 'tags' %}" class="nav-link"> catagory </a>
+          <a href="{% url 'recipes' %}" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="{% url 'signup' %}" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <!-- main -->
+    <main class="page">
+        <section class="recipes-container">
+          <!-- tag container -->
+          <div class="tags-container">
+            <h4></h4>
+            <div class="tags-list">
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+            </div>
+          </div>
+          <!-- end of tag container -->
+           <!-- recipes list -->
+        <div class="recipes-list">
+            <!-- single recipe -->
+            <a href="#soup1" class="recipe">
+              <img
+                src="{% static 'assets/maxican/m1.jpeg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Chef John’s Chicken Tortilla Soup</h5>
+              <p>Prep : 5min</p>
+            </a>
+                <!-- single recipe -->
+                <a href="#soup2" class="recipe">
+                  <img
+                    src="{% static 'assets/maxican/m2.jpeg' %}"
+                    class="img recipe-img"
+                    alt=""
+                  />
+                  <h5 >Best Ever Ceviche</h5>
+                  <p>Prep : 5min</p>
+                </a>
+            </a>
+            <!-- single recipe -->
+            <a href="#soup3" class="recipe">
+              <img
+                src="{% static 'assets/maxican/m3.jpeg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >The Best Easy Shrimp Enchiladas</h5>
+              <p>Prep : 5min</p>
+            </a>
+        </a>
+        <!-- single recipe -->
+        <a href="#soup4" class="recipe">
+          <img
+            src="{% static 'assets/maxican/m4.jpeg' %}"
+            class="img recipe-img"
+            alt=""
+          />
+          <h5 >Easy Chicken Street Tacos</h5>
+          <p>Prep : 5min</p>
+        </a>
+    </a>
+    <!-- single recipe -->
+    <a href="#soup5" class="recipe">
+      <img
+        src="{% static 'assets/maxican/m5.jpeg' %}"
+        class="img recipe-img"
+        alt=""
+      />
+      <h5 >Simple Slow-Cooked Korean Beef Soft Tacos</h5>
+      <p>Prep : 5min</p>
+    </a>
+</a>
+<!-- single recipe -->
+<a href="#soup6" class="recipe">
+  <img
+    src="{% static 'assets/maxican/m6.jpeg' %}"
+    class="img recipe-img"
+    alt=""
+  />
+  <h5 >Chipotle Barbacoa</h5>
+  <p>Prep : 5min</p>
+</a>
+        </main>
+        <!--end of main-->
+        <main class="page">
+            <div class="recipe-page0">
+              <section class="recipe-hero">
+                <img
+                  src="{% static 'assets/maxican/m1.jpeg' %}"
+                  class="img recipe-hero-img"
+                />
+                <article class="recipe-info">
+                  <h2 id="soup1">Chef John’s Chicken Tortilla Soup</h2>
+                  <p>
+                    My chicken tortilla soup is not a fast recipe, but it is one of the greatest chicken soup experience
+                     known to man.The smoky, spicy, slowly simmered tomato chicken broth is made from scratch, and the 
+                     soup is topped with all your favorite garnishes: toasted tortilla strips, s our cream, avocado,
+                      cilantro, lime, and crumbled Mexican cheese.
+                  </p>
+                  <div class="recipe-icons">
+                    <article>
+                      <i class="fas fa-clock"></i>
+                      <h5>prep time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="far fa-clock"></i>
+                      <h5>Total time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="fas fa-user-friends"></i>
+                      <h5>servings</h5>
+                      <p>1 serving</p>
+                    </article>
+                  </div>
+                  
+                  <p class="recipe-tags">
+                    Tags : <a href="{% url 'home' %}">home</a>
+                    <a href="{% url 'about' %}">about</a>
+                    <a href="{% url 'maxican' %}">catagory</a>
+                  </p>
+                </article>
+              </section>
+              <!-- content -->
+              <section class="recipe-content">
+                <article>
+                  <h4>instructions</h4>
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 1</p>
+                      <div></div>
+                    </header>
+                    <p>
+                        Combine chicken, 1 onion, stems from the cilantro bunch, bay leaves, oregano, peppercorns,
+                         dried chili pods, and 3 quarts of water in a large soup pot set over medium-high heat. Bring 
+                         to simmer, lower heat to medium-low, and simmer for 1 hour.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 2</p>
+                      <div></div>
+                    </header>
+                    <p>
+                        Meanwhile, make the tortilla strips: Preheat the oven to 350 degrees F (180 degrees C). 
+                        Line a baking sheet with a silicone mat or parchment paper.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 3</p>
+                      <div></div>
+                    </header>
+                    <p>Cut tortillas in half, and then cut crosswise into 1/4-inch strips. Transfer tortilla strips
+                         to the prepared baking sheet and drizzle with oil. Add salt and toss well to coat, then spread
+                          strips out as evenly as possible.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                  <div>
+                    <h4>ingredients</h4>
+                    <p class="single-ingredient">1 (4 1/2 pound) whole chicken</p>
+                    <p class="single-ingredient">3 white onions, halved, divided</p>
+                    <p class="single-ingredient">1 bunch cilantro, rinsed well 2 bay leaves</p>
+                    <p class="single-ingredient">1/2 teaspoon whole black peppercorns</p>
+                    <p class="single-ingredient">1 teaspoon Mexican oregano 2 dried chili pepper pods, seeded (optional)</p>
+                    <p class="single-ingredient">3 quarts water</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+            <main class="page">
+                <div class="recipe-page0">
+                  <section class="recipe-hero">
+                    <img
+                      src="{% static 'assets/maxican/m2.jpeg' %}"
+                      class="img recipe-hero-img"
+                    />
+                    <article class="recipe-info">
+                      <h2 id="soup2">Best Ever Ceviche</h2>
+                      <p>
+                        This sea bass ceviche is a juicy freshness overload and truly the best ceviche I've ever had. The flavors are bright,
+                         slightly salty, with a kick of heat and a bit of sweetness. Cold and crunchy  with tender fish
+                          and creamy avocado, the textures are very well balanced. The mango adds a delightful sweet burst.
+                      </p>
+                      <div class="recipe-icons">
+                        <article>
+                          <i class="fas fa-clock"></i>
+                          <h5>prep time</h5>
+                          <p>5 mins.</p>
+                        </article>
+                        <article>
+                          <i class="far fa-clock"></i>
+                          <h5>Total time</h5>
+                          <p>5 mins.</p>
+                        </article>
+                        <article>
+                          <i class="fas fa-user-friends"></i>
+                          <h5>servings</h5>
+                          <p>1 serving</p>
+                        </article>
+                      </div>
+                      
+                      <p class="recipe-tags">
+                        Tags : <a href="{% url 'home' %}">home</a>
+                        <a href="{% url 'about' %}">about</a>
+                        <a href="{% url 'maxican' %}">catagory</a>
+                      </p>
+                    </article>
+                  </section>
+                  <!-- content -->
+                  <section class="recipe-content">
+                    <article>
+                      <h4>instructions</h4>
+                      <!-- single instruction -->
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 1</p>
+                          <div></div>
+                        </header>
+                        <p>
+                            Combine red bell pepper, red onion, jalapenos, tomato, cucumber, mango, sea bass, and lime juice in a bowl.
+                             Toss well to coat and refrigerate for 12 minutes, stirring every 4 minutes. Stir in salt, oil, 
+                            and cilantro until well coated. Carefully fold in avocado and serve immediately with tortilla chips or tostadas.
+                        </p>
+                      </div>
+                      <!-- end of single instruction -->
+                    </article>
+                    <article class="second-column">
+                      <div>
+                        <h4>ingredients</h4>
+                        <p class="single-ingredient">1/3 cup finely diced red bell pepper</p>
+                        <p class="single-ingredient">1/3 cup minced red onion 2 jalapenos, minced</p>
+                        <p class="single-ingredient">1/3 cup finely diced tomato</p>
+                        <p class="single-ingredient">1/3 cup finely diced seeded cucumber 1/2 mango, finely diced</p>
+                        <p class="single-ingredient">1 pound sea bass, cut into 1/2-inch cubes</p>
+                        <p class="single-ingredient">2/3 cup fresh lime juice (from about 4 limes)</p>
+                      </div>
+                    </article>
+                  </section>
+                </div>
+                <main class="page">
+                    <div class="recipe-page0">
+                      <section class="recipe-hero">
+                        <img
+                          src="{% static 'assets/maxican/m3.jpeg' %}"
+                          class="img recipe-hero-img"
+                        />
+                        <article class="recipe-info">
+                          <h2 id="soup3">The Best Easy Shrimp Enchiladas</h2>
+                          <p>
+                            I'm calling these the best easy shrimp enchiladas, and they are, without a doubt, the best shrimp
+                             enchiladas you will ever taste, thanks to my secret ingredient, canned lobster bisque. They are
+                              rich, meaty, and delicious, have a deeper flavor than most lighter shrimp enchiladas, and you 
+                              don't have to make the creamy enchilada sauce from scratch.
+                          </p>
+                          <div class="recipe-icons">
+                            <article>
+                              <i class="fas fa-clock"></i>
+                              <h5>prep time</h5>
+                              <p>5 mins.</p>
+                            </article>
+                            <article>
+                              <i class="far fa-clock"></i>
+                              <h5>Total time</h5>
+                              <p>5 mins.</p>
+                            </article>
+                            <article>
+                              <i class="fas fa-user-friends"></i>
+                              <h5>servings</h5>
+                              <p>1 serving</p>
+                            </article>
+                          </div>
+                          
+                          <p class="recipe-tags">
+                            Tags : <a href="{% url 'home' %}">home</a>
+                            <a href="{% url 'about' %}">about</a>
+                            <a href="{% url 'maxican' %}">catagory</a>
+                          </p>
+                        </article>
+                      </section>
+                      <!-- content -->
+                      <section class="recipe-content">
+                        <article>
+                          <h4>instructions</h4>
+                          <!-- single instruction -->
+                          <div class="single-instruction">
+                            <header>
+                              <p>step 1</p>
+                              <div></div>
+                            </header>
+                            <p>
+                                Preheat the oven to 450 degrees F (230 degrees C).
+                                 Season shrimp with salt and cayenne in a bowl and toss with tongs to evenly coat.
+                            </p>
+                          </div>
+                          <!-- end of single instruction -->
+                          <!-- single instruction -->
+                          <div class="single-instruction">
+                            <header>
+                              <p>step 2</p>
+                              <div></div>
+                            </header>
+                            <p>
+                                Add 1 tablespoon of avocado oil to a skillet, and set on medium-high heat. Place shrimp,
+                                 without crowding, in a single layer in the skillet; sear for 30 to 60 seconds per side, 
+                                 then transfer to a bowl. You will have to work in batches. Place seared shrimp in the 
+                                 refrigerator.
+                            </p>
+                          </div>
+                          <!-- end of single instruction -->
+                          <!-- single instruction -->
+                          <div class="single-instruction">
+                            <header>
+                              <p>step 3</p>
+                              <div></div>
+                            </header>
+                            <p>
+                                Add peppers, onions, and a large pinch of salt to the skillet. Reduce heat to medium, 
+                                and cook, stirring up the brown bits from the bottom of the pan, until onions begin to 
+                                turn translucent, 3 to 5 minutes.
+                            </p>
+                          </div>
+                          <!-- end of single instruction -->
+                          <!-- single instruction -->
+                          <div class="single-instruction">
+                            <header>
+                              <p>step 4</p>
+                              <div></div>
+                            </header>
+                            <p>
+                                Season with chili powder, smoked paprika, cumin, black pepper, chipotle pepper, and
+                                 garlic; sauté for 1 to 2 minutes more. Remove 8 rounded tablespoons of the mixture
+                                  to a bowl and set aside.
+                            </p>
+                          </div>
+                          <!-- end of single instruction -->
+                          <!-- single instruction -->
+                          <div class="single-instruction">
+                            <header>
+                              <p>step 5</p>
+                              <div></div>
+                            </header>
+                            <p>
+                                Pour water into the pan and stir to deglaze the bottom. Stir in lobster bisque, 
+                                plus a few tablespoons of water used to rinse the cans. Add tomato paste and raise
+                                 heat to medium-high; stir until well combined. Bring sauce to a simmer, reduce heat 
+                                 to medium, and simmer for 5 to 10 minutes, stirring occasionally.
+                            </p>
+                          </div>
+                          <!-- end of single instruction -->
+                        </article>
+                        <article class="second-column">
+                          <div>
+                            <h4>ingredients</h4>
+                            <p class="single-ingredient">32 extra-large raw shrimp (16 to 20 per pound), 
+                                peeled and deveined</p>
+                            <p class="single-ingredient">1/2 teaspoon salt, or more as needed</p>
+                            <p class="single-ingredient">1/3 cup finely diced tomato</p>
+                            <p class="single-ingredient">1 pinch cayenne pepper
+
+                                2 tablespoons avocado oil, plus more as needed</p>
+                            <p class="single-ingredient">1 cup diced poblano pepper or other green chili pepper</p>
+                            <p class="single-ingredient">1 cup diced onion
+
+                                2 tablespoons chili powder</p>
+                          </div>
+                        </article>
+                      </section>
+                    </div>
+                    <main class="page">
+                        <div class="recipe-page0">
+                          <section class="recipe-hero">
+                            <img
+                              src="{% static 'assets/maxican/m4.jpeg' %}"
+                              class="img recipe-hero-img"
+                            />
+                            <article class="recipe-info">
+                              <h2 id="soup4">Easy Chicken Street Tacos</h2>
+                              <p>
+                                I go to my local Mexican Market and buy "pollo para asar" which translates to "chicken to grill.
+                                " This chicken is seasoned and ready to grill. These delicious tacos are easy to make and 
+                                topped with cilantro and onions. I serve them with guacamole, salsa and fresh lime wedges on 
+                                the side.
+                              </p>
+                              <div class="recipe-icons">
+                                <article>
+                                  <i class="fas fa-clock"></i>
+                                  <h5>prep time</h5>
+                                  <p>5 mins.</p>
+                                </article>
+                                <article>
+                                  <i class="far fa-clock"></i>
+                                  <h5>Total time</h5>
+                                  <p>5 mins.</p>
+                                </article>
+                                <article>
+                                  <i class="fas fa-user-friends"></i>
+                                  <h5>servings</h5>
+                                  <p>1 serving</p>
+                                </article>
+                              </div>
+                              
+                              <p class="recipe-tags">
+                                Tags : <a href="{% url 'home' %}">home</a>
+                                <a href="{% url 'about' %}">about</a>
+                                <a href="{% url 'maxican' %}">catagory</a>
+                              </p>
+                            </article>
+                          </section>
+                          <!-- content -->
+                          <section class="recipe-content">
+                            <article>
+                              <h4>instructions</h4>
+                              <!-- single instruction -->
+                              <div class="single-instruction">
+                                <header>
+                                  <p>step 1</p>
+                                  <div></div>
+                                </header>
+                                <p>Preheat an outdoor grill for medium-high heat and lightly oil the grate.
+
+
+                                </p>
+                              </div>
+                              <!-- end of single instruction -->
+                              <!-- single instruction -->
+                              <div class="single-instruction">
+                                <header>
+                                  <p>step 2</p>
+                                  <div></div>
+                                </header>
+                                <p>Grill chicken, turning occasionally, until juices run clear and chicken is no longer 
+                                    pink at the center, about 7 minutes. An instant-read thermometer, inserted near the 
+                                    center, should read at least 165 degrees F (74 degrees C).
+
+
+                                </p>
+                              </div>
+                              <!-- end of single instruction -->
+                              <!-- single instruction -->
+                              <div class="single-instruction">
+                                <header>
+                                  <p>step 3</p>
+                                  <div></div>
+                                </header>
+                                <p>
+                                    Heat corn tortillas until soft and pliable in the microwave, about 1 minute. Top with chicken, onions, 
+                                    and cilantro.
+                                </p>
+                              </div>
+                              <!-- end of single instruction -->
+                            </article>
+                            <article class="second-column">
+                              <div>
+                                <h4>ingredients</h4>
+                                <p class="single-ingredient">1 pound pollo para asar (seasoned,boneless, skinless chicken</p>
+                                <p class="single-ingredient">1 onion, diced/p>
+                                <p class="single-ingredient">1/3 cup finely diced tomato</p>
+                                <p class="single-ingredient">1 pinch cayenne pepper</p>
+                                <p class="single-ingredient">11/2 cup chopped cilantro
+
+                                    </p>
+                                <p class="single-ingredient">8 corn tortillas
+    </p>
+                              </div>
+                            </article>
+                          </section>
+                        </div>
+                        <main class="page">
+                            <div class="recipe-page0">
+                              <section class="recipe-hero">
+                                <img
+                                  src="{% static 'assets/maxican/m5.jpeg' %}"
+                                  class="img recipe-hero-img"
+                                />
+                                <article class="recipe-info">
+                                  <h2 id="soup5">Simple Slow-Cooked Korean Beef Soft Tacos</h2>
+                                  <p>
+                                    This Korean taco recipe was given to me by a Korean friend. 
+                                    It's so full of flavor! I did tweak it a little to add more spice. 
+                                    Serve with your favorite taco toppings.
+                                  </p>
+                                  <div class="recipe-icons">
+                                    <article>
+                                      <i class="fas fa-clock"></i>
+                                      <h5>prep time</h5>
+                                      <p>5 mins.</p>
+                                    </article>
+                                    <article>
+                                      <i class="far fa-clock"></i>
+                                      <h5>Total time</h5>
+                                      <p>5 mins.</p>
+                                    </article>
+                                    <article>
+                                      <i class="fas fa-user-friends"></i>
+                                      <h5>servings</h5>
+                                      <p>1 serving</p>
+                                    </article>
+                                  </div>
+                                  
+                                  <p class="recipe-tags">
+                                    Tags : <a href="{% url 'home' %}">home</a>
+                                    <a href="{% url 'about' %}">about</a>
+                                    <a href="{% url 'maxican' %}">catagory</a>
+                                  </p>
+                                </article>
+                              </section>
+                              <!-- content -->
+                              <section class="recipe-content">
+                                <article>
+                                  <h4>instructions</h4>
+                                  <!-- single instruction -->
+                                  <div class="single-instruction">
+                                    <header>
+                                      <p>step 1</p>
+                                      <div></div>
+                                    </header>
+                                    <p>
+                                        Place chuck roast into a slow cooker with onion, brown sugar, soy sauce, garlic,
+                                         jalapeño pepper, ginger, rice vinegar, sesame oil, salt, and pepper. Cover and 
+                                         cook until meat is tender and can easily be pulled apart with a fork, on Low for
+                                          10 hours or High for 8 hours.
+                                    </p>
+                                  </div>
+                                  <!-- end of single instruction -->
+                                  <!-- single instruction -->
+                                  <div class="single-instruction">
+                                    <header>
+                                      <p>step 2</p>
+                                      <div></div>
+                                    </header>
+                                    <p>
+                                        Transfer roast to a cutting board and shred meat with two forks. Return to the
+                                         slow cooker and mix with the juices.
+                                    </p>
+                                  </div>
+                                  <!-- end of single instruction -->
+                                  <!-- single instruction -->
+                                  <div class="single-instruction">
+                                    <header>
+                                      <p>step 3</p>
+                                      <div></div>
+                                    </header>
+                                    <p>
+                                        Serve with corn tortillas.
+
+
+                                    </p>
+                                  </div>
+                                  <!-- end of single instruction -->
+                                 
+                                  
+                                </article>
+                                <article class="second-column">
+                                  <div>
+                                    <h4>ingredients</h4>
+                                    <p class="single-ingredient">1 (3 pound) beef chuck roast, trimmed
+
+                                    </p>
+                                    <p class="single-ingredient">½ medium onion, diced<</p>
+                                    <p class="single-ingredient">½ cup dark brown sugar</p>
+                                    <p class="single-ingredient">⅓ cup soy sauce 10 cloves garlic</p>
+                                    <p class="single-ingredient">1 medium jalapeno pepper, diced (Optional)</p>
+                                    <p class="single-ingredient">1 tablespoon sesame oil</p>
+                                  </div>
+                                </article>
+                              </section>
+                            </div>
+                            <main class="page">
+                                <div class="recipe-page0">
+                                  <section class="recipe-hero">
+                                    <img
+                                      src="{% static 'assets/maxican/m6.jpeg' %}"
+                                      class="img recipe-hero-img"
+                                    />
+                                    <article class="recipe-info">
+                                      <h2 id="soup6">Chipotle Barbacoa</h2>
+                                      <p>
+                                        This chipotle barbacoa is as close to a certain big chain's version as I have ever made. 
+                                        It is full of intense flavors such as garlic, cayenne, and sweet, smoky chipotle.
+                                         Make sure you scale down the cayenne and serrano if you can't handle the heat because 
+                                         this recipe is packin' lots of it! Serve on corn or flour tortillas garnished with cilantro 
+                                         and topped with lime cilantro rice (from this website), black beans, pico de gallo, guacamole, 
+                                         cheese, lettuce, and sour cream.
+                                      </p>
+                                      <div class="recipe-icons">
+                                        <article>
+                                          <i class="fas fa-clock"></i>
+                                          <h5>prep time</h5>
+                                          <p>5 mins.</p>
+                                        </article>
+                                        <article>
+                                          <i class="far fa-clock"></i>
+                                          <h5>Total time</h5>
+                                          <p>5 mins.</p>
+                                        </article>
+                                        <article>
+                                          <i class="fas fa-user-friends"></i>
+                                          <h5>servings</h5>
+                                          <p>1 serving</p>
+                                        </article>
+                                      </div>
+                                      
+                                      <p class="recipe-tags">
+                                        Tags : <a href="{% url 'home' %}">home</a>
+                                        <a href="{% url 'about' %}">about</a>
+                                        <a href="{% url 'maxican' %}">catagory</a>
+                                      </p>
+                                    </article>
+                                  </section>
+                                  <!-- content -->
+                                  <section class="recipe-content">
+                                    <article>
+                                      <h4>instructions</h4>
+                                      <!-- single instruction -->
+                                      <div class="single-instruction">
+                                        <header>
+                                          <p>step 1</p>
+                                          <div></div>
+                                        </header>
+                                        <p>
+                                            Heat oil in a large skillet over low heat, gradually increasing heat to medium-high. Cook beef 
+                                            in hot oil until browned, about 10 seconds per side. Transfer beef to a slow cooker.
+                                        </p>
+                                      </div>
+                                      <!-- end of single instruction -->
+                                      <!-- single instruction -->
+                                      <div class="single-instruction">
+                                        <header>
+                                          <p>step 2</p>
+                                          <div></div>
+                                        </header>
+                                        <p>
+                                            Combine chipotle peppers, apple cider, lime juice, garlic, cumin, serrano pepper, cayenne pepper, oregano,
+                                             black pepper, garlic powder, salt, and cloves in a blender or food processor; blend until smooth. Pour over 
+                                             beef in the slow cooker.
+                                        </p>
+                                      </div>
+                                      <!-- end of single instruction -->
+                                      <!-- single instruction -->
+                                      <div class="single-instruction">
+                                        <header>
+                                          <p>step 3</p>
+                                          <div></div>
+                                        </header>
+                                        <p>
+                                            Stir broth, onion, and bay leaves into the slow cooker.
+
+
+                                        </p>
+                                      </div>
+                                      <!-- end of single instruction -->
+                                      <!-- single instruction -->
+                                      <div class="single-instruction">
+                                        <header>
+                                          <p>step 4</p>
+                                          <div></div>
+                                        </header>
+                                        <p>Cook on Low until beef is fork-tender, 6 to 8 hours. Shred beef using 2 forks to serve.
+
+                                        </p>
+                                      </div>
+                                      <!-- end of single instruction -->
+                                     
+                                      
+                                    </article>
+                                    <article class="second-column">
+                                      <div>
+                                        <h4>ingredients</h4>
+                                        <p class="single-ingredient">2 tablespoons vegetable oil</p>
+                                        <p class="single-ingredient">1 (2 pound) beef chuck roast, trimmed and cut into 4 to 6 pieces</p>
+                                        <p class="single-ingredient">4 chipotle peppers in adobo sauce</p>
+                                        <p class="single-ingredient">⅓ cup apple cider</p>
+                                        <p class="single-ingredient">3 tablespoons lime juice</p>
+                                        <p class="single-ingredient">4 cloves garlic, peeled, or more to taste
+            
+                                            4 teaspoons cumin</p>
+                                      </div>
+                                    </article>
+                                  </section>
+                                </div>
+            <!-- footer -->
+    <footer class="page-footer">
+        <p>
+          <span class="footer-logo">TastyBites</span> Built by Error coders
+        </p>
+      </footer>
+      <script src="{% static 'js/app.js' %}"></script>
+    </body>
+  </html>
+  

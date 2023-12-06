@@ -1,0 +1,184 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TastyBites</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="{% static '/assets/recipe-0.jpeg'%}" height="130" width="130" alt="TastyBites" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="{% url 'home' %}" class="nav-link"> home </a>
+          <a href="{% url 'about' %}" class="nav-link"> about </a>
+          <a href="{% url 'tags' %}" class="nav-link"> catagory </a>
+          <a href="{% url 'recipes' %}" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="{% url 'signup' %}" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+
+
+
+
+
+
+
+
+
+    <!-- main class-->
+    <main class="page">
+
+        <div class="recipe-4">
+            <section class="recipe-hero">
+              <img
+                src="{% static 'assets/recipes/recipe-3.jpeg' %}"
+                class="img recipe-hero-img"
+              />
+              <article class="recipe-info">
+                <h2>Vegetable Soup</h2>
+                <p>
+                  Vegetable Soup Recipe is one of the soups people enjoy. 
+                  This soup is a healthy delicious soup you can enjoy with 
+                  any swallow of choice. Italian sausage in the skillet in 
+                  the beginning, before the onion and garlic.The is also a 
+                  popular Nigerian soup recipe prepared in event organized in Nigeria.
+                </p>
+                <div class="recipe-icons">
+                  <article>
+                    <i class="fas fa-clock"></i>
+                    <h5>prep time</h5>
+                    <p>30 min.</p>
+                  </article>
+                  <article>
+                    <i class="far fa-clock"></i>
+                    <h5>cook time</h5>
+                    <p>15 min.</p>
+                  </article>
+                  <article>
+                    <i class="fas fa-user-friends"></i>
+                    <h5>serving</h5>
+                    <p>2 servings</p>
+                  </article>
+                </div>
+                <p class="recipe-tags">
+                  Tags : <a href="{% url 'tagtemplate' %}">beef</a>
+                  <a href="{% url 'tagtemplate' %}">breakfast</a>
+                  <a href="{% url 'tagtemplate' %}">pancakes</a>
+                  <a href="{% url 'tagtemplate' %}">food</a>
+                </p>
+              </article>
+            </section>
+            <!-- content -->
+            <section class="recipe-content">
+              <article>
+                <h4>instructions</h4>
+                <!-- single instruction -->
+                <div class="single-instruction">
+                  <header>
+                    <p>step 1</p>
+                    <div></div>
+                  </header>
+                  <p>
+                    Wash the beef and stock fish,put in a clean pot
+                    Add slices of onion, seasoning cube and salt.
+                    Combine and place on a low heat and leave to cook for 5 minutes
+                  </p>
+                </div>
+                <!-- end of single instruction -->
+                <!-- single instruction -->
+                <div class="single-instruction">
+                  <header>
+                    <p>step 2 </p>
+                    <div></div>
+                  </header>
+                  <p>
+                    Add kpomo or cow skin,add little water and cook for 10 minutes
+                     Add smoked fish and crayfish,leave for 5 minutes
+                     Remove from heat and set aside
+                  </p>
+                </div>
+                <!-- end of single instruction -->
+                <!-- single instruction -->
+                <div class="single-instruction">
+                  <header>
+                    <p>step 3 </p>
+                    <div></div>
+                  </header>
+                  <p>
+                    In a separate clean dry pot,put shredded water leaves
+                    Add onion slices, crayfish and palm oil and cook on a 
+                    low for 10 to 15 minutes or when the water leaf is no longer slimy.
+                  </p>
+                </div>
+                <div class="single-instruction">
+                  <header>
+                    <p>step 4 </p>
+                    <div></div>
+                  </header>
+                  <p>
+                    Add the protein to the water leaf,add the remaining oil,ogiri,salt and seasoning cubes,
+                    then combine well Leave for 5 minutes,add the shredded ugu leaves,combine and leave for 
+                    3 to 4 minutes Remove from heat. The soup is ready!
+                  </p>
+                </div>
+              </article>
+              <article class="second-column">
+                <div>
+                  <h4>ingredients</h4>
+                  <p class="single-ingredient">3 medium stock fish ear or to taste</p>
+                  <p class="single-ingredient">400g kpomo or cowskin </p>
+                  <p class="single-ingredient">600g smoked fish  </p>
+                  <p class="single-ingredient">4 medium small onions </p>
+                  <p class="single-ingredient">3 seasoning cubes </p>
+                  <p class="single-ingredient">2 small custard cups shredded water leaves</p>
+                  <p class="single-ingredient">3 and 1/2 small custard cups shredded ugu leaves </p>
+                </div>
+                <div>
+                  <h4>tools</h4>
+                  <p class="single-tool">pot</p>
+                  <p class="single-tool">Measuring Spoons</p>
+                  <p class="single-tool">Measuring Cups</p>
+                </div>
+              </article>
+            </section>
+          </div>
+    
+ </main>
+ <!-- footer -->
+ <footer class="page-footer">
+  <p>
+    <span class="footer-logo">TastyBites</span> Built by
+  </p>
+</footer>
+<script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
+

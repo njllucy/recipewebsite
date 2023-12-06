@@ -1,0 +1,38 @@
+{%load static %}
+<html>
+    <head>
+        <title>Welcome Page</title>
+        <style>
+            body{
+                background-color: black;
+                color: blue;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        {% load static %}
+
+
+      
+        
+        <center><h1>Welcome to Tasty Bites</h1></center>
+
+        <div class="imgcontainer">
+            <img src="{% static 'recipe.png' %}" alt="recipe" class="recipe">
+        </div>
+
+        <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      <span class="footer-logo">TastyBites</span> Built by
+    </p>
+  </footer>
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
+
+
+    </body>
+
+</html>

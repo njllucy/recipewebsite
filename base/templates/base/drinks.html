@@ -1,0 +1,706 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="{% static '/assets/recipe-0.jpeg'%}" height="130" width="130" alt="TastyBites" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="{% url 'home' %}" class="nav-link"> home </a>
+          <a href="{% url 'about' %}" class="nav-link"> about </a>
+          <a href="{% url 'tags' %}" class="nav-link"> catagory </a>
+          <a href="{% url 'recipes' %}" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="{% url 'signup' %}" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <!-- main -->
+    <main class="page">
+      <section class="recipes-container">
+        <!-- tag container -->
+        <div class="tags-container">
+          <h4></h4>
+          <div class="tags-list">
+            <a href="{% url 'tagtemplate' %}"></a>
+            <a href="{% url 'tagtemplate' %}"></a>
+            <a href="{% url 'tagtemplate' %}"></a>
+            <a href="{% url 'tagtemplate' %}"></a>
+          </div>
+        </div>
+        <!-- end of tag container -->
+        <!-- recipes list -->
+        <div class="recipes-list">
+          <!-- single recipe -->
+          <a href="#peaches" class="recipe">
+            <img
+              src="{% static 'assets/drinks/drinks-1.jpeg' %}"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5 >Peaches & Cream Cocktail</h5>
+            <p>Prep : 5min</p>
+          </a>
+            <!-- single recipe -->
+            <a href="#smoothie" class="recipe">
+              <img
+                src="{% static 'assets/drinks/drinks-2.jpeg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Apple & strawberry Smoothie</h5>
+              <p>Prep : 15min | Cook : 5min</p>
+            </a>
+                <!-- single recipe -->
+                <a href="#macha" class="recipe">
+                  <img
+                    src="{% static 'assets/drinks/drinks-3.jpeg' %}"
+                    class="img recipe-img"
+                    alt=""
+                  />
+                  <h5 >Matcha Frappe</h5>
+                  <p>Prep : 5min</p>
+                </a>
+            </a>
+            <!-- single recipe -->
+            <a href="#mojito" class="recipe">
+              <img
+                src="{% static 'assets/drinks/drinks-4.jpeg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Guava Mojito's</h5>
+              <p>Prep : 5min</p>
+            </a>
+            <a href="#cock1" class="recipe">
+                <img
+                  src="{% static 'assets/drinks/drinks-5.jpeg' %}"
+                  class="img recipe-img"
+                  alt=""
+                />
+                <h5 >Halloween Jell-O Shots</h5>
+                <p>Prep : 5min</p>
+              </a>
+              <a href="#drink6" class="recipe">
+                <img
+                  src="{% static 'assets/drinks/drinks-6.jpeg' %}"
+                  class="img recipe-img"
+                  alt=""
+                />
+                <h5 >Caribbean Sorrel Tea</h5>
+                <p>Prep : 5min</p>
+              </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          
+          
+    </main>
+    <!--end of main-->
+    <main class="page">
+        <div class="recipe-page0">
+          <section class="recipe-hero">
+            <img
+              src="{% static 'assets/drinks/drinks-1.jpeg' %}"
+              class="img recipe-hero-img"
+            />
+            <article class="recipe-info">
+              <h2 id="peaches">Peaches & Cream Cocktail</h2>
+              <p>
+                This fresh peaches and cream cocktail screams summer. Peaches, 
+                peach schnapps, and vodka combine in this simple yet tasty frozen drink.
+              </p>
+              <div class="recipe-icons">
+                <article>
+                  <i class="fas fa-clock"></i>
+                  <h5>prep time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="far fa-clock"></i>
+                  <h5>Total time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="fas fa-user-friends"></i>
+                  <h5>servings</h5>
+                  <p>1 serving</p>
+                </article>
+              </div>
+              
+              <p class="recipe-tags">
+                Tags : <a href="{% url 'home' %}">home</a>
+                <a href="{% url 'about' %}">about</a>
+                <a href="{% url 'drinks' %}">catagory</a>
+              </p>
+            </article>
+          </section>
+          <!-- content -->
+          <section class="recipe-content">
+            <article>
+              <h4>instructions</h4>
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 1</p>
+                  <div></div>
+                </header>
+                <p>
+                    Place ice in a blender and crush for 15 to 20 seconds. 
+                    Add fresh peaches, peach schnapps, and whipped vodka. Blend until smooth.
+                </p>
+              </div>
+              <!-- end of single instruction -->
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 2</p>
+                  <div></div>
+                </header>
+                <p>
+                    Rim glass with frozen whipped topping. Pour cocktail into
+                    glass and serve garnished with peach slice.olf banh mi man bun bespoke selfies
+                    freegan ethical hexagon.
+                </p>
+              </div>
+              <!-- end of single instruction -->
+            </article>
+            <article class="second-column">
+              <div>
+                <h4>ingredients</h4>
+                <p class="single-ingredient">1 cup ice</p>
+                <p class="single-ingredient">1 1/2 cups peeled and chopped fresh peaches</p>
+                <p class="single-ingredient">1/4 cup peach schnapps</p>
+                <p class="single-ingredient">1/4 cup whipped vodka</p>
+                <p class="single-ingredient">frozen whipped topping (such as Cool Whip®),
+                                             thawed, for rim</p>
+                <p class="single-ingredient">peach slice for garnish</p>
+              </div>
+              <div>
+                <h4>Nutrition Facts</h4>
+                <p class="single-tool">402 Calories</p>
+                <p class="single-tool">2g fat</p>
+                <p class="single-tool">54g carbs</p>
+                <p class="single-tool">4g protein</p>
+              </div>
+            </article>
+          </section>
+        </div>
+        <main class="page">
+            <div class="recipe-page0">
+              <section class="recipe-hero">
+                <img
+                  src="{% static 'assets/drinks/drinks-2.jpeg' %}"
+                  class="img recipe-hero-img"
+                />
+                <article class="recipe-info">
+                  <h2 id="smoothie">Apple & Strawberry Smoothie</h2>
+                  <p>
+                    Start your day off right with this quick and nutritious apple smoothie, ready in minutes. 
+                    This breakfast smoothie has a nice combination of fruit and is slightly sweet, creamy, 
+                    and satisfying.
+                  </p>
+                  <div class="recipe-icons">
+                    <article>
+                      <i class="fas fa-clock"></i>
+                      <h5>prep time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="far fa-clock"></i>
+                      <h5>Total time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="fas fa-user-friends"></i>
+                      <h5>servings</h5>
+                      <p>2 serving</p>
+                    </article>
+                  </div>
+                  <p class="recipe-tags">
+                    Tags : <a href="{% url 'home' %}">home</a>
+                    <a href="{% url 'about' %}">about</a>
+                    <a href="{% url 'drinks' %}">catagory</a>
+                  </p>
+                </article>
+              </section>
+              <!-- content -->
+              <section class="recipe-content">
+                <article>
+                  <h4>instructions</h4>
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 1</p>
+                      <div></div>
+                    </header>
+                    <p>
+                        Place almond milk, apple, strawberries, banana, and yogurt in a blender,
+                        being sure the milk goes in first. Process until smooth,occasionally scraping 
+                        down the sides of the blender with a rubber spatula, if necessary.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 2</p>
+                      <div></div>
+                    </header>
+                    <p>
+                        Pour into serving glasses and serve immediately..
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                  <div>
+                    <h4>ingredients</h4>
+                    <p class="single-ingredient">3/4 cup vanilla almond milk</p>
+                    <p class="single-ingredient">1 apple - peeled, cored, and cubed</p>
+                    <p class="single-ingredient">1 cup halved frozen strawberries</p>
+                    <p class="single-ingredient">1 frozen banana, peeled and cubed</p>
+                    <p class="single-ingredient">1/4 cup vanilla Greek yogurt
+                        (such as Cabot® 2% lowfat vanilla Greek yogurt)</p>
+                    </div>
+                    <div>
+                    <h4>Nutrition Facts</h4>
+                    <p class="single-tool">501 Calories</p>
+                    <p class="single-tool">3g fat</p>
+                    <p class="single-tool">137g carbs</p>
+                    <p class="single-tool">9g protein</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+
+    </main>
+    <main class="page">
+        <div class="recipe-page0">
+          <section class="recipe-hero">
+            <img
+              src="{% static 'assets/drinks/drinks-3.jpeg' %}"
+              class="img recipe-hero-img"
+            />
+            <article class="recipe-info">
+              <h2 id="macha">Matcha Frappe</h2>
+              <p>
+                If you can’t get enough of matcha - this frappe will be
+                 a perfect kick to your craving!
+              </p>
+              <div class="recipe-icons">
+                <article>
+                  <i class="fas fa-clock"></i>
+                  <h5>prep time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="far fa-clock"></i>
+                  <h5>Total time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="fas fa-user-friends"></i>
+                  <h5>servings</h5>
+                  <p>1 serving</p>
+                </article>
+              </div>
+              <p class="recipe-tags">
+                Tags : <a href="{% url 'home' %}">home</a>
+                <a href="{% url 'about' %}">about</a>
+                <a href="{% url 'drinks' %}">catagory</a>
+              </p>
+            </article>
+          </section>
+          <!-- content -->
+          <section class="recipe-content">
+            <article>
+              <h4>instructions</h4>
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 1</p>
+                  <div></div>
+                </header>
+                <p>
+                    Combine matcha, vanilla syrup, Almond Breeze Original Almondmilk, Almond Breeze Sweet 
+                    Crème Almondmilk Creamer, and ice cubes in a blender. Blend until smooth and frothy.
+                </p>
+              </div>
+              <!-- end of single instruction -->
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 2</p>
+                  <div></div>
+                </header>
+                <p>
+                 Server as you want
+                </p>
+              </div>
+              <!-- end of single instruction -->
+            </article>
+            <article class="second-column">
+              <div>
+                <h4>ingredients</h4>1 1/2 cups Almond Breeze Original Almondmilk</p>
+                <p class="single-ingredient">1 tablespoon Almond Breeze Sweet Crème Almondmilk Creamer</p>
+                <p class="single-ingredient">2 teaspoons matcha</p>
+                <p class="single-ingredient">2 tablespoons vanilla syrup</p>
+                <p class="single-ingredient">2 cups ice</p>
+              </div>
+              <div>
+                <h4>Nutrition Facts</h4>
+                <p class="single-tool">402 Calories</p>
+                <p class="single-tool">2g fat</p>
+                <p class="single-tool">54g carbs</p>
+                <p class="single-tool">4g protein</p>
+              </div>
+            </article>
+          </section>
+        </div>
+        <main class="page">
+            <div class="recipe-page0">
+              <section class="recipe-hero">
+                <img
+                  src="{% static 'assets/drinks/drinks-4.jpeg' %}"
+                  class="img recipe-hero-img"
+                />
+                <article class="recipe-info">
+                  <h2 id="mojito">Guava Mojito's</h2>
+                  <p>
+                    Fresh, bright fruit and mint notes make this a sweet hit 
+                    on hot days and warm evenings.
+                  </p>
+                  <div class="recipe-icons">
+                    <article>
+                      <i class="fas fa-clock"></i>
+                      <h5>prep time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="far fa-clock"></i>
+                      <h5>Total time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="fas fa-user-friends"></i>
+                      <h5>servings</h5>
+                      <p>1 serving</p>
+                    </article>
+                  </div>
+                  <p class="recipe-tags">
+                    Tags : <a href="{% url 'home' %}">home</a>
+                    <a href="{% url 'about' %}">about</a>
+                    <a href="{% url 'drinks' %}">catagory</a>
+                  </p>
+                </article>
+              </section>
+              <!-- content -->
+              <section class="recipe-content">
+                <article>
+                  <h4>instructions</h4>
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 1</p>
+                      <div></div>
+                    </header>
+                    <p>Fill a glass with ice.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 2</p>
+                      <div></div>
+                    </header>
+                    <p>
+                        Muddle 3 sprigs mint and sugar together in a cocktail shaker; add ice, rum, 
+                        lime juice, and guava nectar. Cover and shake 10 times. Strain drink into glass
+                         filled with ice; add club soda and garnish with 1 mint sprig.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                  <div>
+                    <h4>ingredients</h4>
+                    <p class="single-ingredient">ice</p>
+                    <p class="single-ingredient">4 sprigs fresh mint, divided</p>
+                    <p class="single-ingredient">2 teaspoons white sugar</p>
+                    <p class="single-ingredient">3 fluid ounces passion fruit-flavored rum</p>
+                    <p class="single-ingredient">1 lime, juiced</p>
+                    <p class="single-ingredient">p3 fluid ounces unsweetened guava nectar</p>
+                    <p class="single-ingredient">2 fluid ounces club soda, or as needed</p>
+                  </div>
+                  <div>
+                    <h4>Nutrition Facts</h4>
+                    <p class="single-tool">291 Calories</p>
+                    <p class="single-tool">0g fat</p>
+                    <p class="single-tool">26g carbs</p>
+                    <p class="single-tool">1g protein</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+            <main class="page">
+                <div class="recipe-page0">
+                  <section class="recipe-hero">
+                    <img
+                      src="{% static 'assets/drinks/drinks-5.jpeg' %}"
+                      class="img recipe-hero-img"
+                    />
+                    <article class="recipe-info">
+                      <h2 id="cock1">Halloween Jell-O Shots</h2>
+                      <p>
+                        These Halloween jello shots look like candy corn and make a fun, boozy treat for adults. 
+                        This version goes for a triple shot, so drink responsibly. Serve with candy corn on the side. Cheers!.
+                      </p>
+                      <div class="recipe-icons">
+                        <article>
+                          <i class="fas fa-clock"></i>
+                          <h5>prep time</h5>
+                          <p>5 mins.</p>
+                        </article>
+                        <article>
+                          <i class="far fa-clock"></i>
+                          <h5>Total time</h5>
+                          <p>5 mins.</p>
+                        </article>
+                        <article>
+                          <i class="fas fa-user-friends"></i>
+                          <h5>servings</h5>
+                          <p>1 serving</p>
+                        </article>
+                      </div>
+                      <p class="recipe-tags">
+                        Tags : <a href="{% url 'home' %}">home</a>
+                        <a href="{% url 'about' %}">about</a>
+                        <a href="{% url 'drinks' %}">catagory</a>
+                      </p>
+                    </article>
+                  </section>
+                  <!-- content -->
+                  <section class="recipe-content">
+                    <article>
+                      <h4>instructions</h4>
+                      <!-- single instruction -->
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 1</p>
+                          <div></div>
+                        </header>
+                        <p>
+                            Make the yellow layer: Pour boiling water into a small bowl.
+                             Add lemon gelatin mix and stir until dissolved.
+                        </p>
+                      </div>
+                      <!-- end of single instruction -->
+                      <!-- single instruction -->
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 2</p>
+                          <div></div>
+                        </header>
+                        <p>
+                            Pour vodka into a 2-cup liquid measure; add enough ice to make 
+                            1 1/4 cups. Pour into lemon gelatin mixture and stir until slightly 
+                            thickened; remove any unmelted ice. Pour mixture into 16 tall shot 
+                            glasses, filling each 1/3 full.Refrigerate until lemon gelatin is set, at least 1 1/2 hours.
+                        </p>
+                      </div>
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 3</p>
+                          <div></div>
+                        </header>
+                        <p>
+                            When lemon gelatin is set, make the orange layer: Pour boiling 
+                            water into a small bowl. Add orange gelatin mix and stir until dissolved.
+                        </p>
+                      </div>
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 4</p>
+                          <div></div>
+                        </header>
+                        <p>
+                            When orange gelatin is set, make the white layer: Stir warm water 
+                            and unflavored gelatin together in a bowl until gelatin is dissolved. 
+                            Stir in condensed milk and rum. Pour into shot glasses over orange gelatin. 
+                            Refrigerate until set, at least 30 minutes.
+                        </p>
+                      </div>
+                    
+                      <!-- end of single instruction -->
+                    </article>
+                    <article class="second-column">
+                      <div>
+                        <h4>ingredients</h4>
+                        <p class="single-ingredient">¾ cup boiling water</p>
+                        <p class="single-ingredient">1 (3 ounce) package lemon-flavored gelatin mix (such as Jell-O)</p>
+                        <p class="single-ingredient">1 cup vodka</p>
+                        <p class="single-ingredient">3 ice cubes, or as needed</p>
+                        <p class="single-ingredient">Same for other levels</p>
+                      </div>
+                      <div>
+                        <h4>Nutrition Facts</h4>
+                        <p class="single-tool">202 Calories</p>
+                        <p class="single-tool">2g fat</p>
+                        <p class="single-tool">22g carbs</p>
+                        <p class="single-tool">3g protein</p>
+                      </div>
+                    </article>
+                  </section>
+                </div>
+
+
+                <main class="page">
+                  <div class="recipe-page0">
+                    <section class="recipe-hero">
+                      <img
+                        src="{% static 'assets/drinks/drinks-6.jpeg' %}"
+                        class="img recipe-hero-img"
+                      />
+                      <article class="recipe-info">
+                        <h2 id="drink6">Halloween Jell-O Shots</h2>
+                        <p>
+                          These Halloween jello shots look like candy corn and make a fun, boozy treat for adults. 
+                          This version goes for a triple shot, so drink responsibly. Serve with candy corn on the side. Cheers!.
+                        </p>
+                        <div class="recipe-icons">
+                          <article>
+                            <i class="fas fa-clock"></i>
+                            <h5>prep time</h5>
+                            <p>5 mins.</p>
+                          </article>
+                          <article>
+                            <i class="far fa-clock"></i>
+                            <h5>Total time</h5>
+                            <p>5 mins.</p>
+                          </article>
+                          <article>
+                            <i class="fas fa-user-friends"></i>
+                            <h5>servings</h5>
+                            <p>1 serving</p>
+                          </article>
+                        </div>
+                        <p class="recipe-tags">
+                          Tags : <a href="{% url 'home' %}">home</a>
+                          <a href="{% url 'about' %}">about</a>
+                          <a href="{% url 'drinks' %}">catagory</a>
+                        </p>
+                      </article>
+                    </section>
+                    <!-- content -->
+                    <section class="recipe-content">
+                      <article>
+                        <h4>instructions</h4>
+                        <!-- single instruction -->
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 1</p>
+                            <div></div>
+                          </header>
+                          <p>
+                              Make the yellow layer: Pour boiling water into a small bowl.
+                               Add lemon gelatin mix and stir until dissolved.
+                          </p>
+                        </div>
+                        <!-- end of single instruction -->
+                        <!-- single instruction -->
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 2</p>
+                            <div></div>
+                          </header>
+                          <p>
+                              Pour vodka into a 2-cup liquid measure; add enough ice to make 
+                              1 1/4 cups. Pour into lemon gelatin mixture and stir until slightly 
+                              thickened; remove any unmelted ice. Pour mixture into 16 tall shot 
+                              glasses, filling each 1/3 full.Refrigerate until lemon gelatin is set, at least 1 1/2 hours.
+                          </p>
+                        </div>
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 3</p>
+                            <div></div>
+                          </header>
+                          <p>
+                              When lemon gelatin is set, make the orange layer: Pour boiling 
+                              water into a small bowl. Add orange gelatin mix and stir until dissolved.
+                          </p>
+                        </div>
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 4</p>
+                            <div></div>
+                          </header>
+                          <p>
+                              When orange gelatin is set, make the white layer: Stir warm water 
+                              and unflavored gelatin together in a bowl until gelatin is dissolved. 
+                              Stir in condensed milk and rum. Pour into shot glasses over orange gelatin. 
+                              Refrigerate until set, at least 30 minutes.
+                          </p>
+                        </div>
+                      
+                        <!-- end of single instruction -->
+                      </article>
+                      <article class="second-column">
+                        <div>
+                          <h4>ingredients</h4>
+                          <p class="single-ingredient">¾ cup boiling water</p>
+                          <p class="single-ingredient">1 (3 ounce) package lemon-flavored gelatin mix (such as Jell-O)</p>
+                          <p class="single-ingredient">1 cup vodka</p>
+                          <p class="single-ingredient">3 ice cubes, or as needed</p>
+                          <p class="single-ingredient">Same for other levels</p>
+                        </div>
+                        <div>
+                          <h4>Nutrition Facts</h4>
+                          <p class="single-tool">202 Calories</p>
+                          <p class="single-tool">2g fat</p>
+                          <p class="single-tool">22g carbs</p>
+                          <p class="single-tool">3g protein</p>
+                        </div>
+                      </article>
+                    </section>
+                  </div>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        <span class="footer-logo">TastyBites</span> Built by Error coders
+      </p>
+    </footer>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>

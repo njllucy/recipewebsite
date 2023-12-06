@@ -1,0 +1,795 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="{% static '/assets/recipe-0.jpeg'%}" height="130" width="130" alt="TastyBites" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="{% url 'home' %}" class="nav-link"> home </a>
+          <a href="{% url 'about' %}" class="nav-link"> about </a>
+          <a href="{% url 'tags' %}" class="nav-link"> catagory </a>
+          <a href="{% url 'recipes' %}" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="{% url 'signup' %}" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+
+
+
+
+
+    <main class="page">
+        <section class="recipes-container">
+          <!-- tag container -->
+          <div class="tags-container">
+            <h4></h4>
+            <div class="tags-list">
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+            </div>
+          </div>
+          <!-- end of tag container -->
+          <!-- recipes list -->
+          <div class="recipes-list">
+
+
+
+
+
+
+
+
+
+
+            <!-- single recipe -->
+          <a href="#L1" class="recipe">
+            <img
+              src="{% static 'assets/lunch/lunch-1.jpeg' %}"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5 >Spicy Pasta</h5>
+            <p>Prep : 35min</p>
+          </a>
+            <!-- single recipe -->
+            <a href="#L2" class="recipe">
+              <img
+                src="{% static 'assets/lunch/lunch-2.jpeg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Grilled Chicken</h5>
+              <p>Prep : 45min | Cook : 5min</p>
+            </a>
+                <!-- single recipe -->
+                <a href="#L3" class="recipe">
+                  <img
+                    src="{% static 'assets/lunch/lunch-3.jpg' %}"
+                    class="img recipe-img"
+                    alt=""
+                  />
+                  <h5 >Fried Rice</h5>
+                  <p>Prep : 55min</p>
+                </a>
+            </a>
+            <!-- single recipe -->
+            <a href="#L4" class="recipe">
+              <img
+                src="{% static 'assets/lunch/lunch-4.jpg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Vegetable Rice</h5>
+              <p>Prep : 5min</p>
+            </a>
+
+            <!-- single recipe -->
+            <a href="#L5" class="recipe">
+                <img
+                  src="{% static 'assets/lunch/lunch-5.jpg' %}"
+                  class="img recipe-img"
+                  alt=""
+                />
+                <h5 >Paneer Curry</h5>
+                <p>Prep : 25min</p>
+              </a>
+              <!-- single recipe -->
+              <a href="#L6" class="recipe">
+                <img
+                  src="{% static 'assets/lunch/lunch-6.jpg' %}"
+                  class="img recipe-img"
+                  alt=""
+                />
+                <h5 >Chicken Rice bowl</h5>
+                <p>Prep : 35min</p>
+              </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          
+          
+    </main>
+    <!--end of main-->
+    <main class="page">
+        <div class="recipe-page0">
+          <section class="recipe-hero">
+            <img
+              src="{% static 'assets/lunch/lunch-1.jpeg' %}"
+              class="img recipe-hero-img"
+            />
+            <article class="recipe-info">
+              <h2 id="L1">Spicy Pasta</h2>
+              <p>
+                This pasta dish layers flavors and can be made in under 30 minutes, add a salad and crusty bread and dinner is done.
+              </p>
+              <div class="recipe-icons">
+                <article>
+                  <i class="fas fa-clock"></i>
+                  <h5>prep time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="far fa-clock"></i>
+                  <h5>Total time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="fas fa-user-friends"></i>
+                  <h5>servings</h5>
+                  <p>1 serving</p>
+                </article>
+              </div>
+              
+              <p class="recipe-tags">
+                Tags : <a href="{% url 'home' %}">home</a>
+                <a href="{% url 'about' %}">about</a>
+                <a href="{% url 'lunch' %}">catagory</a>
+              </p>
+            </article>
+          </section>
+          <!-- content -->
+          <section class="recipe-content">
+            <article>
+             
+             
+            
+                <h4>instructions</h4>
+                <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                 
+                  <p>step 1</p>
+                  <div></div>
+                </header>
+                <p>
+                  Bring a large pot with water and 1 tablespoon salt to a boil. Cook rigatoni in the boiling water, stirring occasionally until tender yet firm to the bite, about 10 minutes. Drain and reserve pasta water.
+                </p>
+              </div>
+              <!-- end of single instruction -->
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 2</p>
+                  <div></div>
+                </header>
+                <p>
+                  Meanwhile, combine tapioca starch, Italian seasoning, salt, and black pepper in a bowl. Add chicken pieces and toss to coat. 
+                </p>
+              </div>
+              <!-- end of single instruction -->
+
+               <!-- single instruction -->
+               <div class="single-instruction">
+                <header>
+                  <p>step 3</p>
+                  <div></div>
+                </header>
+                <p>
+                  Heat olive oil in a skillet until it shimmers. Add chicken pieces and cook until browned, about 5 minutes. You might be tempted to add more olive oil or butter, don't do this.. 
+                </p>
+              </div>
+              <!-- end of single instruction -->
+
+               <!-- single instruction -->
+               <div class="single-instruction">
+                <header>
+                  <p>step 4</p>
+                  <div></div>
+                </header>
+                <p>
+                  Pour in reserved pasta water and add mushrooms, artichoke hearts, sun-dried tomatoes, and garlic. Cook about 5 minutes.
+
+
+                  Mix in white wine, cream and Cheddar cheese. Whisk until sauce is slightly thickened. Add rigatoni and toss to combine.
+                  Add pasta and toss to combine. Serve immediately.
+                </p>
+              </div>
+              <!-- end of single instruction -->
+            </article>
+            <article class="second-column">
+              <div>
+                <h4>ingredients</h4>
+                <p class="single-ingredient"> 1 (8 ounce) package rigatoni pasta</p>
+                <p class="single-ingredient">1 pound skinless, boneless chicken breasts, cut into bite-sized pieces</p>
+                <p class="single-ingredient">1 teaspoon Italian seasoning </p>
+                <p class="single-ingredient"> ¼ cup heavy whipping cream 2 ounces shredded aged Cheddar cheese</p>
+                <p class="single-ingredient">2 tablespoons chopped oil-packed sun-dried tomatoes 3 cloves minced garlic</p>
+                <p class="single-ingredient">2 ounces shredded aged Cheddar cheese</p>
+              </div>
+              <div>
+                <h4>Nutrition Facts</h4>
+                <p class="single-tool">402 Calories</p>
+                <p class="single-tool">2g fat</p>
+                <p class="single-tool">54g carbs</p>
+                <p class="single-tool">4g protein</p>
+              </div>
+            </article>
+          </section>
+        </div>
+        <main class="page">
+            <div class="recipe-page0">
+              <section class="recipe-hero">
+                <img
+                  src="{% static 'assets/lunch/lunch-2.jpeg' %}"
+                  class="img recipe-hero-img"
+                />
+                <article class="recipe-info">
+                  <h2 id="L2">Grilled Chicken</h2>
+                  <p>
+                    This fried chicken tenders recipe makes crispy, delicious chicken pieces, paired with our own spicy horseradish dipping sauce. We serve it with our favorite potato salad and corn on the cob.
+                  </p>
+                  <div class="recipe-icons">
+                    <article>
+                      <i class="fas fa-clock"></i>
+                      <h5>prep time</h5>
+                      <p>25 mins.</p>
+                    </article>
+                    <article>
+                      <i class="far fa-clock"></i>
+                      <h5>Total time</h5>
+                      <p>45 mins.</p>
+                    </article>
+                    <article>
+                      <i class="fas fa-user-friends"></i>
+                      <h5>servings</h5>
+                      <p>2 serving</p>
+                    </article>
+                  </div>
+                  <p class="recipe-tags">
+                    Tags : <a href="{% url 'home' %}">home</a>
+                    <a href="{% url 'about' %}">about</a>
+                    <a href="{% url 'lunch' %}">catagory</a>
+                  </p>
+                </article>
+              </section>
+              <!-- content -->
+              <section class="recipe-content">
+                <article>
+                  <h4>instructions</h4>
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 1</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Prepare the breading station: Place flour in a shallow bowl. Place eggs and water in a second shallow bowl. Place bread crumbs in a third shallow bowl, and mix in ground black pepper and cayenne pepper.
+
+
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 2</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Coat chicken in flour, then eggs, and then bread crumbs, one piece at a time, and set aside.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+
+                   <!-- single instruction -->
+                   <div class="single-instruction">
+                    <header>
+                      <p>step 3</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Heat oil in a deep fryer to 375 degrees F (190 degrees C).
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+
+                   <!-- single instruction -->
+                   <div class="single-instruction">
+                    <header>
+                      <p>step 4</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Fry chicken in small batches until the pieces are golden brown, 6 to 8 minutes. Remove chicken to drain on paper towels or a wire rack.
+                      Make the dipping sauce: Combine mayonnaise, sour cream, horseradish, mustard, and Worcestershire sauce in a small bowl. Mix well, and serve with chicken.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                  <div>
+                    <h4>ingredients</h4>
+                    <p class="single-ingredient">24 chicken tenderloins</p>
+                    <p class="single-ingredient">½ teaspoon ground black pepper</p>
+                    <p class="single-ingredient">2 large eggs, beaten</p>
+                    <p class="single-ingredient">2 cups Italian-style seasoned bread crumbs</p>
+                    <p class="single-ingredient">2 quarts oil for frying</p>
+                    </div>
+                    <div>
+                    <h4>Nutrition Facts</h4>
+                    <p class="single-tool">501 Calories</p>
+                    <p class="single-tool">3g fat</p>
+                    <p class="single-tool">137g carbs</p>
+                    <p class="single-tool">9g protein</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+
+    </main>
+    <main class="page">
+        <div class="recipe-page0">
+          <section class="recipe-hero">
+            <img
+              src="{% static 'assets/lunch/lunch-3.jpg' %}"
+              class="img recipe-hero-img"
+            />
+            <article class="recipe-info">
+              <h2 id="L3">Fried Rice</h2>
+              <p>
+                A quick fried rice recipe like you get at your favorite Chinese restaurant. Leftover rice, plus a couple of eggs, baby carrots, peas, and soy sauce is all you need. Garnish with sliced green onions, if desired.
+
+              </p>
+              <div class="recipe-icons">
+                <article>
+                  <i class="fas fa-clock"></i>
+                  <h5>prep time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="far fa-clock"></i>
+                  <h5>Total time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="fas fa-user-friends"></i>
+                  <h5>servings</h5>
+                  <p>1 serving</p>
+                </article>
+              </div>
+              <p class="recipe-tags">
+                Tags : <a href="{% url 'home' %}">home</a>
+                <a href="{% url 'about' %}">about</a>
+                <a href="{% url 'lunch' %}">catagory</a>
+              </p>
+            </article>
+          </section>
+          <!-- content -->
+          <section class="recipe-content">
+            <article>
+              <h4>instructions</h4>
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 1</p>
+                  <div></div>
+                </header>
+                <p>
+                  Place carrots in a small saucepan and cover with water. Bring to a low boil and cook for 3 to 5 minutes. Stir in peas, then immediately drain in a colander.
+
+                </p>
+              </div>
+              <!-- end of single instruction -->
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 2</p>
+                  <div></div>
+                </header>
+                <p>
+                  Heat a wok over high heat. Pour in vegetable oil, then stir in carrots, peas, and garlic; cook for about 30 seconds. Add eggs; stir quickly to scramble eggs with vegetables.
+
+                </p>
+              </div>
+              <!-- end of single instruction -->
+
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 3</p>
+                  <div></div>
+                </header>
+                <p>
+                  Stir in cooked rice. Add soy sauce and toss rice to coat. Drizzle with sesame oil and toss again.
+
+                </p>
+              </div>
+              <!-- end of single instruction -->
+
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 4</p>
+                  <div></div>
+                </header>
+                <p>
+                  Serve hot and enjoy!
+                </p>
+              </div>
+              <!-- end of single instruction -->
+            </article>
+            <article class="second-column">
+              <div>
+                <h4>ingredients</h4>
+                <p class="single-ingredient">⅔ cup chopped baby carrots</p>
+
+                <p class="single-ingredient"> ½ cup frozen green peas</p>
+                <p class="single-ingredient">2 tablespoons vegetable oil</p>
+                <p class="single-ingredient">1 clove garlic, minced, or to taste (Optional)</p>
+                <p class="single-ingredient">3 cups leftover cooked white rice</p>
+                <p class="single-ingredient">1 tablespoon soy sauce, or more to taste</p>
+              </div>
+              <div>
+                <h4>Nutrition Facts</h4>
+                <p class="single-tool">402 Calories</p>
+                <p class="single-tool">2g fat</p>
+                <p class="single-tool">54g carbs</p>
+                <p class="single-tool">4g protein</p>
+              </div>
+            </article>
+          </section>
+        </div>
+        <main class="page">
+            <div class="recipe-page0">
+              <section class="recipe-hero">
+                <img
+                  src="{% static 'assets/lunch/lunch-4.jpg' %}"
+                  class="img recipe-hero-img"
+                />
+                <article class="recipe-info">
+                  <h2 id="L4">Vegetable Rice</h2>
+                  <p>
+                    This  bowl is quick and easy to make. The ingredients can easily be adjusted to suit your taste. Serve over warm rice or spiralized vegetables.
+                  </p>
+                  <div class="recipe-icons">
+                    <article>
+                      <i class="fas fa-clock"></i>
+                      <h5>prep time</h5>
+                      <p>45 mins.</p>
+                    </article>
+                    <article>
+                      <i class="far fa-clock"></i>
+                      <h5>Total time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="fas fa-user-friends"></i>
+                      <h5>servings</h5>
+                      <p>1 serving</p>
+                    </article>
+                  </div>
+                  <p class="recipe-tags">
+                    Tags : <a href="{% url 'home' %}">home</a>
+                    <a href="{% url 'about' %}">about</a>
+                    <a href="{% url 'lunch' %}">catagory</a>
+                  </p>
+                </article>
+              </section>
+              <!-- content -->
+              <section class="recipe-content">
+                <article>
+                  <h4>instructions</h4>
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 1</p>
+                      <div></div>
+                    </header>
+                    <p>Heat a large skillet over medium-high heat. Add beef and cook, stirring and crumbling into small pieces until browned, 5 to 7 minutes. Drain excess grease.
+
+
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 2</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Stir in garlic, ginger, and sesame oil and cook until fragrant, about 2 minutes. Stir in soy sauce, brown sugar, and red pepper. Cook until beef absorbs some sauce, about 7 minutes. Add 1/2 of chopped green onions.
+                      Serve over hot cooked rice; garnish with sesame seeds and remaining green onions.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                  <div>
+                    <h4>ingredients</h4>
+                    <p class="single-ingredient">1 pound lean ground beef, 5 cloves garlic, crushed</p>
+                    <p class="single-ingredient">1 tablespoon freshly grated ginger, 2 teaspoons toasted sesame oil</p>
+                    <p class="single-ingredient">½ cup reduced-sodium soy sauce</p>
+                    <p class="single-ingredient"> cups hot cooked brown rice</p>
+                    <p class="single-ingredient">1 lime, juiced</p>
+                    <p class="single-ingredient">6 green onions, chopped, divided</p>
+                    <p class="single-ingredient">1 tablespoon toasted sesame seeds</p>
+                  </div>
+                  <div>
+                    <h4>Nutrition Facts</h4>
+                    <p class="single-tool">291 Calories</p>
+                    <p class="single-tool">0g fat</p>
+                    <p class="single-tool">26g carbs</p>
+                    <p class="single-tool">1g protein</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+            <main class="page">
+                <div class="recipe-page0">
+                  <section class="recipe-hero">
+                    <img
+                      src="{% static 'assets/lunch/lunch-5.jpg' %}"
+                      class="img recipe-hero-img"
+                    />
+                    <article class="recipe-info">
+                      <h2 id="L5">Paneer Curry</h2>
+                      <p>
+                        When we were kids, whenever my parents went out to an adults only party, my mother used to ask us what we wanted for dinner at home. 99% of the time, our choice was pooris and shahi paneer. My mother was always nice enough to oblige. Here is the recipe. It is quite rich and hence a nice treat.
+
+                      </p>
+                      <div class="recipe-icons">
+                        <article>
+                          <i class="fas fa-clock"></i>
+                          <h5>prep time</h5>
+                          <p>45 mins.</p>
+                        </article>
+                        <article>
+                          <i class="far fa-clock"></i>
+                          <h5>Total time</h5>
+                          <p>5 mins.</p>
+                        </article>
+                        <article>
+                          <i class="fas fa-user-friends"></i>
+                          <h5>servings</h5>
+                          <p>1 serving</p>
+                        </article>
+                      </div>
+                      <p class="recipe-tags">
+                        Tags : <a href="{% url 'home' %}">home</a>
+                        <a href="{% url 'about' %}">about</a>
+                        <a href="{% url 'lunch' %}">catagory</a>
+                      </p>
+                    </article>
+                  </section>
+                  <!-- content -->
+                  <section class="recipe-content">
+                    <article>
+                      <h4>instructions</h4>
+                      <!-- single instruction -->
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 1</p>
+                          <div></div>
+                        </header>
+                        <p>
+                          Heat the oil in a large skillet over medium heat. Cook the onion and garlic in the hot oil until the onions are soft and golden brown, about 5 minutes. Sprinkle the cumin, coriander, turmeric, and chili powder over the onion and garlic; continue cooking until the seasonings are fragrant, about 30 seconds.
+
+
+                        </p>
+                      </div>
+                      <!-- end of single instruction -->
+                      <!-- single instruction -->
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 2</p>
+                          <div></div>
+                        </header>
+                        <p>
+                          Pour the pureed tomatoes into the skillet; cook until the excess liquid evaporates and the oil separates, 3 to 5 minutes. Add the paneer, water, sugar, and salt to the mixture; stir gently so the paneer does not break apart. Cook until the paneer begins to absorb some of the liquid, about 10 minutes. Stir the cream into the mixture and simmer another 5 minutes. Garnish with cilantro to serve.
+
+                        </p>
+                      </div>
+                      
+                      <!-- end of single instruction -->
+
+
+
+                    </article>
+                    <article class="second-column">
+                      <div>
+                        <h4>ingredients</h4>
+                        <p class="single-ingredient">2 tablespoons cooking oil</p>
+                        <p class="single-ingredient">1 large onion, thinly sliced</p>
+                        <p class="single-ingredient">4 cloves garlic, minced</p>
+                        <p class="single-ingredient">½ teaspoon ground turmeric</p>
+                        <p class="single-ingredient">1 teaspoon ground coriander</p>
+                        <p class="single-ingredient">½ teaspoon Kashmiri red chili powder</p>
+                        <p class="single-ingredient">4 tomatoes, pureed</p>
+                        <p class="single-ingredient">1 teaspoon white sugar</p>
+                        <p class="single-ingredient">2 tablespoons chopped fresh cilantro</p>
+                        <p class="single-ingredient">salt to taste</p>
+                      </div>
+                      <div>
+                        <h4>Nutrition Facts</h4>
+                        <p class="single-tool">202 Calories</p>
+                        <p class="single-tool">2g fat</p>
+                        <p class="single-tool">22g carbs</p>
+                        <p class="single-tool">3g protein</p>
+                      </div>
+                    </article>
+                  </section>
+                </div>
+
+
+
+                <main class="page">
+                  <div class="recipe-page0">
+                    <section class="recipe-hero">
+                      <img
+                        src="{% static 'assets/lunch/lunch-6.jpg' %}"
+                        class="img recipe-hero-img"
+                      />
+                      <article class="recipe-info">
+                        <h2 id="L6">Chicken Rice Bowl</h2>
+                        <p>
+                          Have you explored the selection of rice in your grocery store lately? The options have expanded to include arborio rice, basmati rice, black rice, bomba rice, and jasmine rice to name a few.
+
+                        </p>
+                        <div class="recipe-icons">
+                          <article>
+                            <i class="fas fa-clock"></i>
+                            <h5>prep time</h5>
+                            <p>15 mins.</p>
+                          </article>
+                          <article>
+                            <i class="far fa-clock"></i>
+                            <h5>Total time</h5>
+                            <p>25 mins.</p>
+                          </article>
+                          <article>
+                            <i class="fas fa-user-friends"></i>
+                            <h5>servings</h5>
+                            <p>1 serving</p>
+                          </article>
+                        </div>
+                        <p class="recipe-tags">
+                          Tags : <a href="{% url 'home' %}">home</a>
+                          <a href="{% url 'about' %}">about</a>
+                          <a href="{% url 'tags' %}">catagory</a>
+
+                        </p>
+                      </article>
+                    </section>
+                    <!-- content -->
+                    <section class="recipe-content">
+                      <article>
+                        <h4>instructions</h4>
+                        <!-- single instruction -->
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 1</p>
+                            <div></div>
+                          </header>
+                          <p>
+                            Many comfort food recipes call for leftover rice. Here are the recipes for fried rice, rice casseroles, breakfast rice, stuffed peppers, and rice pudding you'll want.
+
+                          </p>
+                        </div>
+                        <!-- end of single instruction -->
+                        <!-- single instruction -->
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 2</p>
+                            <div></div>
+                          </header>
+                          <p>
+                              Pour vodka into a 2-cup liquid measure; add enough ice to make 
+                              1 1/4 cups. Pour into lemon gelatin mixture and stir until slightly 
+                              thickened; remove any unmelted ice. Pour mixture into 16 tall shot 
+                              glasses, filling each 1/3 full.Refrigerate until lemon gelatin is set, at least 1 1/2 hours.
+                          </p>
+                        </div>
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 3</p>
+                            <div></div>
+                          </header>
+                          <p>
+                              When lemon gelatin is set, make the orange layer: Pour boiling 
+                              water into a small bowl. Add orange gelatin mix and stir until dissolved.
+                          </p>
+                        </div>
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 4</p>
+                            <div></div>
+                          </header>
+                          <p>
+                              When orange gelatin is set, make the white layer: Stir warm water 
+                              and unflavored gelatin together in a bowl until gelatin is dissolved. 
+                              Stir in condensed milk and rum. Pour into shot glasses over orange gelatin. 
+                              Refrigerate until set, at least 30 minutes.
+                          </p>
+                        </div>
+                      
+                        <!-- end of single instruction -->
+  
+  
+  
+                      </article>
+                      <article class="second-column">
+                        <div>
+                          <h4>ingredients</h4>
+                          <p class="single-ingredient">2 teaspoons canola oil, or more as needed</p>
+                          <p class="single-ingredient">2 eggs</p>
+                          <p class="single-ingredient">2 teaspoons sesame oil, divided</p>
+                          <p class="single-ingredient">¼ cup frozen peas and carrots, thawed and patted dry with paper towel</p>
+                          <p class="single-ingredient">1 tablespoon Sriracha sauce, or to taste (Optional)</p>
+                          <p class="single-ingredient">¾ cup boiling water</p>
+                          <p class="single-ingredient">½ teaspoon ground white pepper, or to taste</p>
+                          <p class="single-ingredient"></p>½ teaspoon salt, or to taste </p>
+                          <p class="single-ingredient">¼ cup chopped fresh cilantro, or to taste (Optional)</p>
+                          <p class="single-ingredient">1 teaspoon fish sauce</p>
+                        </div>
+                        <div>
+                          <h4>Nutrition Facts</h4>
+                          <p class="single-tool">202 Calories</p>
+                          <p class="single-tool">2g fat</p>
+                          <p class="single-tool">22g carbs</p>
+                          <p class="single-tool">3g protein</p>
+                        </div>
+                      </article>
+                    </section>
+                  </div>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        <span class="footer-logo">TastyBites</span> Built by Error Coders
+      </p>
+    </footer>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>

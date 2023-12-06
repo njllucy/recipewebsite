@@ -1,0 +1,195 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TastyBites</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="{% static '/assets/recipe-0.jpeg'%}" height="130" width="130" alt="TastyBites" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="{% url 'home' %}" class="nav-link"> home </a>
+          <a href="{% url 'about' %}" class="nav-link"> about </a>
+          <a href="{% url 'tags' %}" class="nav-link"> catagory </a>
+          <a href="{% url 'recipes' %}" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="{% url 'signup' %}" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+
+
+
+
+
+
+
+
+
+    <div class="recipe-page1">
+      <section class="recipe-hero">
+        <img
+          src="{% static 'assets/recipes/recipe-1.jpeg' %}"
+          class="img recipe-hero-img"
+        />
+        <article class="recipe-info">
+          <h2 id="ops">Spanish pasta</h2>
+          <p>
+            This Creamy Tomato and Spinach Pasta recipe is kind of a meal on its own,
+             but you may want to add a side dish, like crusty Garlic Bread, No Knead 
+             Focaccia Rolls, or a light Simple Side Salad. You can also beef up the 
+             recipe by adding some Garlic Herb Baked Chicken Breasts, or browning some
+             Italian sausage in the skillet in the beginning, before the onion and garlic.
+          </p>
+          <div class="recipe-icons">
+            <article>
+              <i class="fas fa-clock"></i>
+              <h5>prep time</h5>
+              <p>30 min.</p>
+            </article>
+            <article>
+              <i class="far fa-clock"></i>
+              <h5>cook time</h5>
+              <p>15 min.</p>
+            </article>
+            <article>
+              <i class="fas fa-user-friends"></i>
+              <h5>serving</h5>
+              <p>2 servings</p>
+            </article>
+          </div>
+          <p class="recipe-tags">
+            Tags : <a href="{% url 'tagtemplate' %}">beef</a>
+            <a href="{% url 'tagtemplate' %}">breakfast</a>
+            <a href="{% url 'tagtemplate' %}">pancakes</a>
+            <a href="{% url 'tagtemplate' %}">food</a>
+          </p>
+        </article>
+      </section>
+      <!-- content -->
+      <section class="recipe-content">
+        <article>
+          <h4>instructions</h4>
+          <!-- single instruction -->
+          <div class="single-instruction">
+            <header>
+              <p>step 1 : Boil Water</p>
+              <div></div>
+            </header>
+            <p>
+              Start with a very large pot of water, about 6 quarts 
+              per pound of pasta. Bring it to a rapid boil.
+            </p>
+          </div>
+          <!-- end of single instruction -->
+          <!-- single instruction -->
+          <div class="single-instruction">
+            <header>
+              <p>step 2 : Add Salt</p>
+              <div></div>
+            </header>
+            <p>
+              Put in a lot of salt, about 3 tablespoons. 
+              If you taste the water, it should taste like the sea.
+            </p>
+          </div>
+          <!-- end of single instruction -->
+          <!-- single instruction -->
+          <div class="single-instruction">
+            <header>
+              <p>step 3 : Add The Pasta</p>
+              <div></div>
+            </header>
+            <p>
+              Drop in the pasta while the water is at a boil and give it 
+              a gentle stir.
+            </p>
+          </div>
+          <div class="single-instruction">
+            <header>
+              <p>step 4 : Stir</p>
+              <div></div>
+            </header>
+            <p>
+              Stir it occasionally while it cooks. Use the cooking time on the pasta 
+              package as a guide.
+            </p>
+          </div>
+          <!-- end of single instruction -->
+          <div class="single-instruction">
+            <header>
+              <p>step 5 : Taste The Pasta</p>
+              <div></div>
+            </header>
+            <p>
+              But watch out — it's hot! Sample the pasta at about 2 minutes shy of the 
+              indicated time. It should be al dente. You'll finish cooking it in the sauce.
+            </p>
+          </div>
+          <div class="single-instruction">
+            <header>
+              <p>step 6 : Add Pasta Water</p>
+              <div></div>
+            </header>
+            <p>
+              Ladle a few tablespoons of the pasta water at a time until you have the right 
+              consistency to your sauce. Remember, the pasta will absorb the liquid. 
+              Tip: Pasta water helps to thicken the sauce.
+            </p>
+          </div>
+        </article>
+        <article class="second-column">
+          <div>
+            <h4>ingredients</h4>
+            <p class="single-ingredient">1 1/2 lb. penne pasta</p>
+            <p class="single-ingredient">1 yellow onion </p>
+            <p class="single-ingredient">2 cloves garlic </p>
+            <p class="single-ingredient">1 Tbsp olive oil </p>
+            <p class="single-ingredient">1 15oz. can diced tomatoes </p>
+          </div>
+          <div>
+            <h4>tools</h4>
+            <p class="single-tool">pot</p>
+            <p class="single-tool">Measuring Spoons</p>
+            <p class="single-tool">Measuring Cups</p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      <span class="footer-logo">TastyBites</span> Built by
+    </p>
+  </footer>
+  <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>

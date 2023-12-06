@@ -1,0 +1,228 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tasty Bites</title>
+	<link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+	<link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+</head>
+<body>
+	<!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="home.html" class="nav-logo">
+            <img src="{% static '/assets/recipe-0.jpeg'%}" height="130" width="130" alt="TastyBites" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="{% url 'home' %}" class="nav-link "> home </a>
+          <a href="{% url 'about' %}" class="nav-link "> about </a>
+          <a href="{% url 'tags' %}" class="nav-link"> catagory </a>
+          <a href="{% url 'recipes' %}" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="{% url 'signup' %}" class="btn"> contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <!-- main -->
+    <main class="page">
+      <!-- header -->
+      <header class="hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>Tasty Bites</h1>
+            <h4>no fluff, just recipes</h4>
+          </div>
+        </div>
+      </header>
+      <!-- end of header -->
+      <section class="recipes-container">
+        <!-- tag container -->
+        <div class="tags-container">
+          
+          <h4>recipes</h4>
+          <div class="tags-list">
+            <a href="{% url 'login' %}">Drinks</a>
+            <a href="{% url 'login' %}">Breakfast</a>
+            <a href="{% url 'login' %}">Lunch</a>
+            <a href="{% url 'login' %}">Dinner</a>
+          </div>
+        </div>
+        <!-- end of tag container -->
+        <!-- recipes list -->
+        <div class="recipes-list">
+          <!-- single recipe -->
+          <a href="{% url 'recipe2' %}" class="recipe-page0">
+            <img
+              src= "{% static 'assets/recipes/recipe-1.jpeg'%} #ops "
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Carne Asada</h5>
+            <p>Prep : 15min | Cook : 5min</p>
+          </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          <a href="{% url 'recipe3'%}" class="recipe1">
+            <img
+              src="{% static 'assets/recipes/recipe-2.jpeg'%}"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Greek Ribs</h5>
+            <p>Prep : 15min | Cook : 5min</p>
+          </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          <a href="{% url 'recipe4' %}" class="recipe-page2">
+            <img
+              src="{% static 'assets/recipes/recipe-3.jpeg'%}"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Vegetable Soup</h5>
+            <p>Prep : 15min | Cook : 5min</p>
+          </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          <a href="{% url 'recipe1' %}" class="recipe">
+            <img
+              src="{% static 'assets/recipes/recipe-4.jpeg'%}"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5>Banana Pancakes</h5>
+            <p>Prep : 15min | Cook : 5min</p>
+          </a>
+          <!-- end of single recipe -->
+
+
+
+
+
+          <!--breakfast-->
+
+           <!-- single recipe -->
+           <a href="{% url 'recipe5' %}" class="recipe">
+            <img
+              src="{% static 'assets/breakfast/breakfast-1.jpeg' %}"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5 >Fruit Cake</h5>
+            <p>Prep : 15min</p>
+          </a>
+            <!-- single recipe -->
+            <a href="#bf2" class="recipe">
+              <img
+                src="{% static 'assets/breakfast/breakfast-2.jpeg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Strawberry Crepes</h5>
+              <p>Prep : 15min | Cook : 5min</p>
+            </a>
+                <!-- single recipe -->
+                <a href="#bf3" class="recipe">
+                  <img
+                    src="{% static 'assets//breakfast/breakfast-3.jpg' %}"
+                    class="img recipe-img"
+                    alt=""
+                  />
+                  <h5 >Vegetable Salad</h5>
+                  <p>Prep : 5min</p>
+                </a>
+            </a>
+            <!-- single recipe -->
+            <a href="#bf4" class="recipe">
+              <img
+                src="{% static 'assets//breakfast/breakfast-4.jpg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Egg Toast</h5>
+              <p>Prep : 5min</p>
+            </a>
+
+            <!-- single recipe -->
+            <a href="#bf5" class="recipe">
+                <img
+                  src="{% static 'assets//breakfast/breakfast-5.jpg' %}"
+                  class="img recipe-img"
+                  alt=""
+                />
+                <h5 >Sandwich</h5>
+                <p>Prep : 5min</p>
+              </a>
+              <!-- single recipe -->
+              <a href="#bf6" class="recipe">
+                <img
+                  src="{% static 'assets//breakfast/breakfast-6.jpg' %}"
+                  class="img recipe-img"
+                  alt=""
+                />
+                <h5 >Croissant Sandwich</h5>
+                <p>Prep : 5min</p>
+              </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+           
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!-- end of recipes list -->
+      </section>
+    </main>
+    <!-- end of main -->
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        <span class="footer-logo">TastyBites</span> Built by <span>Error coders</span>
+        
+      </p>
+    </footer>
+    <script src="{% static 'js/app.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

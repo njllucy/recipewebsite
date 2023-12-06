@@ -1,0 +1,805 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'assets/tasty.ico' %}" type="image/x-icon" />
+    <!-- normalize -->
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="{% static '/assets/recipe-0.jpeg'%}" height="130" width="130" alt="TastyBites" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="{% url 'home' %}" class="nav-link"> home </a>
+          <a href="{% url 'about' %}" class="nav-link"> about </a>
+          <a href="{% url 'tags' %}" class="nav-link"> catagory </a>
+          <a href="{% url 'recipes' %}" class="nav-link"> recipes </a>
+
+          <div class="nav-link contact-link">
+            <a href="{% url 'signup' %}" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+
+
+
+
+
+    <main class="page">
+        <section class="recipes-container">
+          <!-- tag container -->
+          <div class="tags-container">
+            <h4></h4>
+            <div class="tags-list">
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+              <a href="{% url 'tagtemplate' %}"></a>
+            </div>
+          </div>
+          <!-- end of tag container -->
+          <!-- recipes list -->
+          <div class="recipes-list">
+
+
+
+
+
+
+
+
+
+
+            <!-- single recipe -->
+          <a href="#bf1" class="recipe">
+            <img
+              src="{% static 'assets/breakfast/breakfast-1.jpeg' %}"
+              class="img recipe-img"
+              alt=""
+            />
+            <h5 >Fruit Cake</h5>
+            <p>Prep : 15min</p>
+          </a>
+            <!-- single recipe -->
+            <a href="#bf2" class="recipe">
+              <img
+                src="{% static 'assets/breakfast/breakfast-2.jpeg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Strawberry Crepes</h5>
+              <p>Prep : 15min | Cook : 5min</p>
+            </a>
+                <!-- single recipe -->
+                <a href="#bf3" class="recipe">
+                  <img
+                    src="{% static 'assets//breakfast/breakfast-3.jpg' %}"
+                    class="img recipe-img"
+                    alt=""
+                  />
+                  <h5 >Vegetable Salad</h5>
+                  <p>Prep : 5min</p>
+                </a>
+            </a>
+            <!-- single recipe -->
+            <a href="#bf4" class="recipe">
+              <img
+                src="{% static 'assets//breakfast/breakfast-4.jpg' %}"
+                class="img recipe-img"
+                alt=""
+              />
+              <h5 >Egg Toast</h5>
+              <p>Prep : 5min</p>
+            </a>
+
+            <!-- single recipe -->
+            <a href="#bf5" class="recipe">
+                <img
+                  src="{% static 'assets//breakfast/breakfast-5.jpg' %}"
+                  class="img recipe-img"
+                  alt=""
+                />
+                <h5 >Sandwich</h5>
+                <p>Prep : 5min</p>
+              </a>
+              <!-- single recipe -->
+              <a href="#bf6" class="recipe">
+                <img
+                  src="{% static 'assets//breakfast/breakfast-6.jpg' %}"
+                  class="img recipe-img"
+                  alt=""
+                />
+                <h5 >Croissant Sandwich</h5>
+                <p>Prep : 5min</p>
+              </a>
+          <!-- end of single recipe -->
+          <!-- single recipe -->
+          
+          
+    </main>
+    <!--end of main-->
+    <main class="page">
+        <div class="recipe-page0">
+          <section class="recipe-hero">
+            <img
+              src="{% static 'assets/breakfast/breakfast-1.jpeg' %}"
+              class="img recipe-hero-img"
+            />
+            <article class="recipe-info">
+              <h2 id="bf1">Fruit Cake</h2>
+              <p>
+                This is an Northern Ireland recipe given to me by my Mum many years ago!! This cake is always much tastier the following day! Enjoy!
+
+              </p>
+              <div class="recipe-icons">
+                <article>
+                  <i class="fas fa-clock"></i>
+                  <h5>prep time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="far fa-clock"></i>
+                  <h5>Total time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="fas fa-user-friends"></i>
+                  <h5>servings</h5>
+                  <p>1 serving</p>
+                </article>
+              </div>
+              
+              <p class="recipe-tags">
+                Tags : <a href="{% url 'home' %}">home</a>
+                <a href="{% url 'about' %}">about</a>
+                <a href="{% url 'breakfast' %}">catagory</a>
+              </p>
+            </article>
+          </section>
+          <!-- content -->
+          <section class="recipe-content">
+            <article>
+              <h4>instructions</h4>
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 1</p>
+                  <div></div>
+                </header>
+                <p>
+                  Preheat the oven to 300 degrees F (150 degrees C). Grease a 9x5 inch loaf pan, and line with parchment paper or aluminum foil.
+
+                </p>
+              </div>
+              <!-- end of single instruction -->
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 2</p>
+                  <div></div>
+                </header>
+                <p>
+                  Combine the water, mixed fruit, sugar and butter in a saucepan over medium heat. Bring to a boil, stirring occasionally, and boil gently for about 10 minutes. Sift the flour, baking soda and mixed spice into a large bowl. Pour in the boiled mixture, and stir until well blended. Mix in the eggs. Pour into the greased loaf pan.
+
+                </p>
+              </div>
+              <!-- end of single instruction -->
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 3</p>
+                  <div></div>
+                </header>
+                <p>
+                  Bake for 90 minutes in the preheated oven, until a skewer or knife inserted into the top comes out clean. Cool cake in the pan for at least 10 minutes before removing.
+
+                  
+                </p>
+              </div>
+              <!-- end of single instruction -->
+
+
+            </article>
+            <article class="second-column">
+              <div>
+                <h4>ingredients</h4>
+                <p class="single-ingredient">1 cup water</p>
+                <p class="single-ingredient">4 cups candied mixed fruit</p>
+                <p class="single-ingredient">1 cup white sugar</p>
+                <p class="single-ingredient">1/4 cup whipped vodka</p>
+                <p class="single-ingredient">2 cups all-purpose flour</p>
+                <p class="single-ingredient">2 eggs, beaten</p>
+              </div>
+              <div>
+                <h4>Nutrition Facts</h4>
+                <p class="single-tool">402 Calories</p>
+                <p class="single-tool">2g fat</p>
+                <p class="single-tool">54g carbs</p>
+                <p class="single-tool">4g protein</p>
+              </div>
+            </article>
+          </section>
+        </div>
+        <main class="page">
+            <div class="recipe-page0">
+              <section class="recipe-hero">
+                <img
+                  src="{% static 'assets/breakfast/breakfast-2.jpeg' %}"
+                  class="img recipe-hero-img"
+                />
+                <article class="recipe-info">
+                  <h2 id="bf2">Strawberry Crepes</h2>
+                  <p>
+                    This strawberry crepe recipe has been a family favorite for over 30 years! These crepes are delicious and very rich! Be sure you have at least 1 hour to prepare them; they are worth every minute!
+
+                  </p>
+                  <div class="recipe-icons">
+                    <article>
+                      <i class="fas fa-clock"></i>
+                      <h5>prep time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="far fa-clock"></i>
+                      <h5>Total time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="fas fa-user-friends"></i>
+                      <h5>servings</h5>
+                      <p>2 serving</p>
+                    </article>
+                  </div>
+                  <p class="recipe-tags">
+                    Tags : <a href="{% url 'home' %}">home</a>
+                    <a href="{% url 'about' %}">about</a>
+                    <a href="{% url 'drinks' %}">catagory</a>
+                  </p>
+                </article>
+              </section>
+              <!-- content -->
+              <section class="recipe-content">
+                <article>
+                  <h4>instructions</h4>
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 1</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Place flour, milk, water, eggs, melted butter, and salt into a blender; blend until smooth and set aside.
+
+
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 2</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Beat confectioners' sugar, cream cheese, lemon juice, lemon zest, and vanilla with an electric mixer in a large bowl until smooth. Gently fold in whipped cream.
+
+
+
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+
+
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 3</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Heat a lightly oiled griddle or non-stick skillet over medium heat.
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                
+                
+                <!-- single instruction -->
+                <div class="single-instruction">
+                  <header>
+                    <p>step 4</p>
+                    <div></div>
+                  </header>
+                  <p>
+                    Pour or scoop batter onto the griddle, using approximately 2 tablespoons for each crepe. Tip and rotate the pan to spread batter as thinly as possible. Flip over when batter is set and edges begin to brown. Continue cooking until bottom begins to brown. Stack finished crepes on a plate; cover with a damp towel.
+                  </p>
+                </div>
+                <!-- end of single instruction -->
+              
+              
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 4</p>
+                  <div></div>
+                </header>
+                <p>
+                  Fill each crepe with 1/4 cup sliced strawberries and 1/3 cup cream cheese filling. Roll up and top with a dollop of cream cheese filling and more sliced strawberries.
+
+
+
+
+                </p>
+              </div>
+              <!-- end of single instruction -->
+            
+            
+            </article>
+                <article class="second-column">
+                  <div>
+                    <h4>ingredients</h4>
+                    <p class="single-ingredient">¾ cup all-purpose flour</p>
+                    <p class="single-ingredient">½ cup milk,½ cup water</p>
+                    <p class="single-ingredient">3 eggs</p>
+                    <p class="single-ingredient">3 tablespoons butter, melted</p>
+                    <p class="single-ingredient">1 (8 ounce) package cream cheese, softened</p>
+                    <p class="single-ingredient">1 tablespoon lemon juice</p>
+                    <p class="single-ingredient">½ teaspoon vanilla extract</p>
+                    <p class="single-ingredient">1 cup heavy cream, whipped</p>
+                    <p class="single-ingredient">4 cups sliced strawberries</p>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  </div>
+                    <div>
+                    <h4>Nutrition Facts</h4>
+                    <p class="single-tool">501 Calories</p>
+                    <p class="single-tool">3g fat</p>
+                    <p class="single-tool">137g carbs</p>
+                    <p class="single-tool">9g protein</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+
+    </main>
+    <main class="page">
+        <div class="recipe-page0">
+          <section class="recipe-hero">
+            <img
+              src="{% static 'assets/breakfast/breakfast-3.jpg' %}"
+              class="img recipe-hero-img"
+            />
+            <article class="recipe-info">
+              <h2 id="bf3">vegetable Salad</h2>
+              <p>
+                This is a flavorful and crunchy vegetable salad tossed with peanuts and bacon bits.
+
+              </p>
+              <div class="recipe-icons">
+                <article>
+                  <i class="fas fa-clock"></i>
+                  <h5>prep time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="far fa-clock"></i>
+                  <h5>Total time</h5>
+                  <p>5 mins.</p>
+                </article>
+                <article>
+                  <i class="fas fa-user-friends"></i>
+                  <h5>servings</h5>
+                  <p>1 serving</p>
+                </article>
+              </div>
+              <p class="recipe-tags">
+                Tags : <a href="{% url 'home' %}">home</a>
+                <a href="{% url 'about' %}">about</a>
+                <a href="{% url 'drinks' %}">catagory</a>
+              </p>
+            </article>
+          </section>
+          <!-- content -->
+          <section class="recipe-content">
+            <article>
+              <h4>instructions</h4>
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 1</p>
+                  <div></div>
+                </header>
+                <p>
+                  Place bacon in a large deep skillet. Cook over medium-high heat until evenly brown, 10 to 15 minutes. Drain bacon on a paper towel-lined plate; crumble.
+                  Mix broccoli, cauliflower, celery, peas, and cranberries in a large bowl.
+
+
+                </p>
+              </div>
+              <!-- end of single instruction -->
+              <!-- single instruction -->
+              <div class="single-instruction">
+                <header>
+                  <p>step 2</p>
+                  <div></div>
+                </header>
+                <p>
+                  Whisk mayonnaise, Parmesan cheese, sugar, onion, vinegar, and salt together in a bowl. Pour dressing over the salad; add nuts and bacon and toss well.
+
+
+                </p>
+              </div>
+              <!-- end of single instruction -->
+            </article>
+            <article class="second-column">
+              <div>
+                <h4>ingredients</h4>
+                <p>3 cups chopped broccoli</p>
+                <p class="single-ingredient">1 ½ cups mayonnaise</p>
+                <p class="single-ingredient">2 teaspoons matcha</p>
+                <p class="single-ingredient">2 tablespoons grated onion</p>
+                <p class="single-ingredient">1 cup Spanish peanuts</p>
+              </div>
+              <div>
+                <h4>Nutrition Facts</h4>
+                <p class="single-tool">402 Calories</p>
+                <p class="single-tool">2g fat</p>
+                <p class="single-tool">54g carbs</p>
+                <p class="single-tool">4g protein</p>
+              </div>
+            </article>
+          </section>
+        </div>
+        <main class="page">
+            <div class="recipe-page0">
+              <section class="recipe-hero">
+                <img
+                  src="{% static 'assets/breakfast/breakfast-4.jpg' %}"
+                  class="img recipe-hero-img"
+                />
+                <article class="recipe-info">
+                  <h2 id="bf4">Egg Toast</h2>
+                  <p>
+                    This is my  favorite use of leftover hard boiled Easter eggs. Great comfort food!
+                  </p>
+                  <div class="recipe-icons">
+                    <article>
+                      <i class="fas fa-clock"></i>
+                      <h5>prep time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="far fa-clock"></i>
+                      <h5>Total time</h5>
+                      <p>5 mins.</p>
+                    </article>
+                    <article>
+                      <i class="fas fa-user-friends"></i>
+                      <h5>servings</h5>
+                      <p>1 serving</p>
+                    </article>
+                  </div>
+                  <p class="recipe-tags">
+                    Tags : <a href="{% url 'home' %}">home</a>
+                    <a href="{% url 'about' %}">about</a>
+                    <a href="{% url 'drinks' %}">catagory</a>
+                  </p>
+                </article>
+              </section>
+              <!-- content -->
+              <section class="recipe-content">
+                <article>
+                  <h4>instructions</h4>
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 1</p>
+                      <div></div>
+                    </header>
+                    <p>Separate the egg whites from the egg yolks. Place the egg yolks into a bowl and mash with a fork. Chop the egg whites into small pieces and set aside.
+
+
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                  <!-- single instruction -->
+                  <div class="single-instruction">
+                    <header>
+                      <p>step 2</p>
+                      <div></div>
+                    </header>
+                    <p>
+                      Melt the butter in a saucepan set over medium heat. Stir in flour until smooth. Gradually mix in the milk and chicken bouillon so that no lumps form and stir constantly until the mixture comes to a boil. Add the egg yolks and mix until dissolved. Stir in egg whites. Serve over toast and season with salt and white pepper.
+
+
+                    </p>
+                  </div>
+                  <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                  <div>
+                    <h4>ingredients</h4>
+                    <p class="single-ingredient">¼ cup butter</p>
+                    <p class="single-ingredient">½ cup all-purpose flour</p>
+                    <p class="single-ingredient">1 tablespoon chicken bouillon granules</p>
+                    <p class="single-ingredient">3 fluid ounces passion fruit-flavored rum</p>
+                    <p class="single-ingredient">6 slices white bread, lightly toasted</p>
+                    <p class="single-ingredient">salt and white pepper to taste</p>
+                    <p class="single-ingredient">3 cups milk</p>
+                  </div>
+                  <div>
+                    <h4>Nutrition Facts</h4>
+                    <p class="single-tool">291 Calories</p>
+                    <p class="single-tool">0g fat</p>
+                    <p class="single-tool">26g carbs</p>
+                    <p class="single-tool">1g protein</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+            <main class="page">
+                <div class="recipe-page0">
+                  <section class="recipe-hero">
+                    <img
+                      src="{% static 'assets/breakfast/breakfast-5.jpg' %}"
+                      class="img recipe-hero-img"
+                    />
+                    <article class="recipe-info">
+                      <h2 id="bf5">Sandwich</h2>
+                      <p>
+                        I came up with this recipe to entertain friends. Since I am a semi-vegetarian and love to BBQ, I am always inventing something new. The first time I made this, my meat-lover friends raved about this dish! I prefer mesquite coals over gas barbeques...however, either works fine.
+
+                      </p>
+                      <div class="recipe-icons">
+                        <article>
+                          <i class="fas fa-clock"></i>
+                          <h5>prep time</h5>
+                          <p>5 mins.</p>
+                        </article>
+                        <article>
+                          <i class="far fa-clock"></i>
+                          <h5>Total time</h5>
+                          <p>5 mins.</p>
+                        </article>
+                        <article>
+                          <i class="fas fa-user-friends"></i>
+                          <h5>servings</h5>
+                          <p>1 serving</p>
+                        </article>
+                      </div>
+                      <p class="recipe-tags">
+                        Tags : <a href="{% url 'home' %}">home</a>
+                        <a href="{% url 'about' %}">about</a>
+                        <a href="{% url 'drinks' %}">catagory</a>
+                      </p>
+                    </article>
+                  </section>
+                  <!-- content -->
+                  <section class="recipe-content">
+                    <article>
+                      <h4>instructions</h4>
+                      <!-- single instruction -->
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 1</p>
+                          <div></div>
+                        </header>
+                        <p>
+                          In a bowl, mix the mayonnaise, minced garlic, and lemon juice. Set aside in the refrigerator.
+
+                        </p>
+                      </div>
+                      <!-- end of single instruction -->
+                      <!-- single instruction -->
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 2</p>
+                          <div></div>
+                        </header>
+                        <p>
+                          Preheat the grill for high heat.
+
+
+                        </p>
+                      </div>
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 3</p>
+                          <div></div>
+                        </header>
+                        <p>
+                          Brush vegetables with olive oil on each side. Brush grate with oil. Place bell peppers and zucchini closest to the middle of the grill, and set onion and squash pieces around them. Cook for about 3 minutes, turn, and cook for another 3 minutes. The peppers may take a bit longer. Remove from grill, and set aside.
+
+                        </p>
+                      </div>
+                      <div class="single-instruction">
+                        <header>
+                          <p>step 4</p>
+                          <div></div>
+                        </header>
+                        <p>
+                          Spread some of the mayonnaise mixture on the cut sides of the bread, and sprinkle each one with feta cheese. Place on the grill cheese side up, and cover with lid for 2 to 3 minutes. This will warm the bread, and slightly melt the cheese. Watch carefully so the bottoms don't burn. Remove from grill, and layer with the vegetables. Enjoy as open faced grilled sandwiches.
+
+                        </p>
+                      </div>
+                    
+                      <!-- end of single instruction -->
+
+
+
+                    </article>
+                    <article class="second-column">
+                      <div>
+                        <h4>ingredients</h4>
+                        <p class="single-ingredient">1 tablespoon lemon juice</p>
+                        <p class="single-ingredient">1 cup sliced red bell peppers</p>
+                        <p class="single-ingredient">1 small zucchini, sliced</p>
+                        <p class="single-ingredient">1 small yellow squash, sliced</p>
+                        <p class="single-ingredient">½ cup crumbled feta cheese</p>
+                      </div>
+                      <div>
+                        <h4>Nutrition Facts</h4>
+                        <p class="single-tool">202 Calories</p>
+                        <p class="single-tool">2g fat</p>
+                        <p class="single-tool">22g carbs</p>
+                        <p class="single-tool">3g protein</p>
+                      </div>
+                    </article>
+                  </section>
+                </div>
+
+
+
+
+
+
+
+
+                <main class="page">
+                  <div class="recipe-page0">
+                    <section class="recipe-hero">
+                      <img
+                        src="{% static 'assets/breakfast/breakfast-6.jpg' %}"
+                        class="img recipe-hero-img"
+                      />
+                      <article class="recipe-info">
+                        <h2 id="bf6"> Croissant Sandwich</h2>
+                        <p>
+                          This is a to-die-for club sandwich. Don't skip on the veggies. We always eat our sandwiches with a fruit salad. Perfect for a hot summer day!
+
+                        </p>
+                        <div class="recipe-icons">
+                          <article>
+                            <i class="fas fa-clock"></i>
+                            <h5>prep time</h5>
+                            <p>5 mins.</p>
+                          </article>
+                          <article>
+                            <i class="far fa-clock"></i>
+                            <h5>Total time</h5>
+                            <p>5 mins.</p>
+                          </article>
+                          <article>
+                            <i class="fas fa-user-friends"></i>
+                            <h5>servings</h5>
+                            <p>1 serving</p>
+                          </article>
+                        </div>
+                        <p class="recipe-tags">
+                          Tags : <a href="{% url 'home' %}">home</a>
+                          <a href="{% url 'about' %}">about</a>
+                          <a href="{% url 'drinks' %}">catagory</a>
+                        </p>
+                      </article>
+                    </section>
+                    <!-- content -->
+                    <section class="recipe-content">
+                      <article>
+                        <h4>instructions</h4>
+                        <!-- single instruction -->
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 1</p>
+                            <div></div>
+                          </header>
+                          <p>
+                            Preheat oven to 350 degrees F (175 degrees C).
+                          </p>
+                        </div>
+                        <!-- end of single instruction -->
+                        <!-- single instruction -->
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 2</p>
+                            <div></div>
+                          </header>
+                          <p>
+                            Mash avocado in a bowl using a fork or potato masher. Stir garlic salt, lemon juice, and oregano into mashed avocado.
+
+
+                          </p>
+                        </div>
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 3</p>
+                            <div></div>
+                          </header>
+                          <p>
+                            Arrange split croissants on a work surface. Place 2 slices turkey on bottom half of each croissant. Layer 1 slice Swiss cheese and 2 bacon slices atop each turkey layer. Place each croissant top over bacon layer. Arrange sandwiches on a baking sheet.
+
+                        </div>
+                        <div class="single-instruction">
+                          <header>
+                            <p>step 4</p>
+                            <div></div>
+                          </header>
+                          <p>
+                            Bake in the preheated oven until cheese is melted, 5 to 7 minutes.
+
+                            Open each sandwich and place 2 tomato slices and 1 lettuce leaf atop bacon layer. Lightly spread 1 teaspoon mustard and 1/4 the avocado mixture onto each croissant top. Return each top to each sandwich.
+
+                          </p>
+                        </div>
+                      
+                        <!-- end of single instruction -->
+  
+  
+  
+                      </article>
+                      <article class="second-column">
+                        <div>
+                          <h4>ingredients</h4>
+                          <p class="single-ingredient">2 avocados, peeled and pitted</p>
+                          <p class="single-ingredient">½ teaspoon garlic salt</p>
+                          <p class="single-ingredient">½ teaspoon lemon juice</p>
+                          <p class="single-ingredient">4 croissants, split,4 lettuce leaves</p>
+                          <p class="single-ingredient">4 slices Swiss cheese,4 teaspoons spicy brown mustard, or to taste</p>
+                        </div>
+                        <div>
+                          <h4>Nutrition Facts</h4>
+                          <p class="single-tool">202 Calories</p>
+                          <p class="single-tool">2g fat</p>
+                          <p class="single-tool">22g carbs</p>
+                          <p class="single-tool">3g protein</p>
+                        </div>
+                      </article>
+                    </section>
+                  </div>
+    <!-- footer -->
+    <footer class="page-footer">
+      <p>
+        <span class="footer-logo">TastyBites</span> Built by Error coders
+      </p>
+    </footer>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
